@@ -42,7 +42,7 @@
 
     <div class="left-section">
       <div class="profile-photo">
-        <img src="./files/photo.jpg" alt="Tu Nombre" />
+        <img src="./files/photo.jpg" alt="Richard Briones Matus" />
       </div>
 
       <div class="info">
@@ -87,73 +87,137 @@
 
     <div class="right-section">
 
-      <h2>Featured Projects</h2>
+      <nav class="tabs" aria-label="Categorías">
+        <span class="bracket">[</span>
+        <button class="tab-btn active" data-tab="presentacion">Presentación</button>
+        <span class="sep">|</span>
+        <button class="tab-btn" data-tab="experiencia">Experiencia</button>
+        <span class="sep">|</span>
+        <button class="tab-btn" data-tab="proyectos">Proyectos</button>
+        <span class="sep">|</span>
+        <button class="tab-btn" data-tab="educacion">Educación</button>
+        <span class="bracket">]</span>
+      </nav>
 
-      <div class="paper">
-        <span class="paper-title">Nombre del Proyecto Uno</span>
-        <p class="result-line">Resultado clave: redujo el tiempo de reporte semanal en 40%.</p>
-        <div class="paper-links">
-          <span class="paper-button" data-abstract="abstract_proj1">[ <span class="abstract-link">resumen</span> | <a href="#" target="_blank">live demo ↗</a> | <a href="#" target="_blank">github</a> ]</span>
-        </div>
-        <p class="abstract" id="abstract_proj1">
-          Describe acá el problema de negocio, los datos usados, la metodología (ej. pipeline de ETL, modelo, validación) y el impacto medido.
-          Mantén el tono directo: qué problema, qué hiciste, qué resultado. Dos o tres oraciones son suficientes.
+      <!-- ===== PRESENTACIÓN ===== -->
+      <section class="tab-panel" data-panel="presentacion">
+        <h2>Presentación</h2>
+        <p class="intro-text">
+          Escribe acá una presentación corta (3-5 líneas): quién eres, en qué te especializas dentro del análisis de datos,
+          y qué tipo de problemas te gusta resolver. Piensa en esto como el "abstract" de tu perfil completo — directo,
+          sin relleno, orientado a lo que puedes aportar.
         </p>
-        <div class="tags">[ python · sql · scikit-learn ]</div>
-      </div>
-
-      <div class="paper">
-        <span class="paper-title">Nombre del Proyecto Dos</span>
-        <p class="result-line">Resultado clave: identificó el segmento con mayor riesgo de churn (18% del total).</p>
-        <div class="paper-links">
-          <span class="paper-button" data-abstract="abstract_proj2">[ <span class="abstract-link">resumen</span> | <a href="#" target="_blank">live demo ↗</a> | <a href="#" target="_blank">github</a> ]</span>
-        </div>
-        <p class="abstract" id="abstract_proj2">
-          Descripción breve de metodología y hallazgos. Puedes mencionar el dataset, el enfoque analítico y cómo se validaron los resultados.
+        <p class="intro-text">
+          Puedes agregar un segundo párrafo con tu enfoque de trabajo o algún dato distintivo (ej. sector en el que te
+          especializas, herramientas favoritas, o un logro que te represente).
         </p>
-        <div class="tags">[ python · streamlit · plotly ]</div>
-      </div>
+      </section>
 
-      <h2>Case Studies</h2>
+      <!-- ===== EXPERIENCIA ===== -->
+      <section class="tab-panel" data-panel="experiencia" hidden>
+        <h2>Experiencia</h2>
 
-      <div class="paper">
-        <span class="paper-title">Análisis Profundo: Título del Case Study</span>
-        <span class="paper-status">análisis exploratorio + modelo predictivo</span>
-        <div class="paper-links">
-          <span class="paper-button" data-abstract="abstract_case1">[ <span class="abstract-link">resumen</span> | <a href="#" target="_blank">notebook</a> | <a href="#" target="_blank">reporte pdf</a> ]</span>
+        <div class="paper">
+          <span class="paper-title">Cargo — Empresa</span>
+          <span class="paper-status">Mes Año — Presente</span>
+          <p class="result-line">Logro clave: describe un resultado medible en una línea.</p>
+          <div class="paper-links">
+            <span class="paper-button" data-abstract="abstract_exp1">[ <span class="abstract-link">detalle</span> ]</span>
+          </div>
+          <p class="abstract" id="abstract_exp1">
+            Describe responsabilidades principales y 2-3 logros concretos con números cuando sea posible
+            (ej. "automaticé X reduciendo Y en Z%").
+          </p>
         </div>
-        <p class="abstract" id="abstract_case1">
-          Un case study más largo funciona como el "paper" del portafolio académico: explica en detalle el problema, los datos, el approach técnico
-          (features, modelo, validación) y las conclusiones de negocio. Ideal para mostrar profundidad técnica ante un comité de reclutamiento.
-        </p>
-        <div class="tags">[ pandas · xgboost · matplotlib ]</div>
-      </div>
 
-      <h2>Tools &amp; Dashboards</h2>
-
-      <div class="paper">
-        <span class="paper-title">Nombre del Dashboard</span>
-        <span class="coauthors">Dashboard interactivo construido con Streamlit</span>
-        <div class="paper-links">
-          <span class="paper-button" data-abstract="abstract_tool1">[ <span class="abstract-link">descripción</span> | <a href="https://tuapp.streamlit.app" target="_blank">abrir app ↗</a> ]</span>
+        <div class="paper">
+          <span class="paper-title">Cargo Anterior — Empresa</span>
+          <span class="paper-status">Mes Año — Mes Año</span>
+          <p class="result-line">Logro clave: describe un resultado medible en una línea.</p>
+          <div class="paper-links">
+            <span class="paper-button" data-abstract="abstract_exp2">[ <span class="abstract-link">detalle</span> ]</span>
+          </div>
+          <p class="abstract" id="abstract_exp2">
+            Descripción breve del rol y logros principales.
+          </p>
         </div>
-        <div class="abstract" id="abstract_tool1">
-          <p>Describe qué permite hacer la herramienta: qué datos consume, qué preguntas responde, quién la usaría.</p>
-          <p class="note">Nota: la app puede tardar unos segundos en cargar la primera vez (modo sleep de Streamlit Community Cloud).</p>
+      </section>
+
+      <!-- ===== PROYECTOS ===== -->
+      <section class="tab-panel" data-panel="proyectos" hidden>
+        <h2>Proyectos</h2>
+
+        <div class="paper">
+          <span class="paper-title">Nombre del Proyecto Uno</span>
+          <p class="result-line">Resultado clave: redujo el tiempo de reporte semanal en 40%.</p>
+          <div class="paper-links">
+            <span class="paper-button" data-abstract="abstract_proj1">[ <span class="abstract-link">resumen</span> | <a href="#" target="_blank">live demo ↗</a> | <a href="#" target="_blank">github</a> ]</span>
+          </div>
+          <p class="abstract" id="abstract_proj1">
+            Describe acá el problema de negocio, los datos usados, la metodología (ej. pipeline de ETL, modelo, validación) y el impacto medido.
+            Mantén el tono directo: qué problema, qué hiciste, qué resultado. Dos o tres oraciones son suficientes.
+          </p>
+          <div class="tags">[ python · sql · scikit-learn ]</div>
         </div>
-      </div>
 
-      <h2>Education</h2>
+        <div class="paper">
+          <span class="paper-title">Nombre del Proyecto Dos</span>
+          <p class="result-line">Resultado clave: identificó el segmento con mayor riesgo de churn (18% del total).</p>
+          <div class="paper-links">
+            <span class="paper-button" data-abstract="abstract_proj2">[ <span class="abstract-link">resumen</span> | <a href="#" target="_blank">live demo ↗</a> | <a href="#" target="_blank">github</a> ]</span>
+          </div>
+          <p class="abstract" id="abstract_proj2">
+            Descripción breve de metodología y hallazgos. Puedes mencionar el dataset, el enfoque analítico y cómo se validaron los resultados.
+          </p>
+          <div class="tags">[ python · streamlit · plotly ]</div>
+        </div>
 
-      <div class="paper">
-        <span class="paper-title">Título — Universidad</span>
-        <span class="paper-status">Año</span>
-      </div>
+        <div class="paper">
+          <span class="paper-title">Análisis Profundo: Título del Case Study</span>
+          <span class="paper-status">análisis exploratorio + modelo predictivo</span>
+          <div class="paper-links">
+            <span class="paper-button" data-abstract="abstract_case1">[ <span class="abstract-link">resumen</span> | <a href="#" target="_blank">notebook</a> | <a href="#" target="_blank">reporte pdf</a> ]</span>
+          </div>
+          <p class="abstract" id="abstract_case1">
+            Un case study más largo funciona como el "paper" del portafolio académico: explica en detalle el problema, los datos, el approach técnico
+            (features, modelo, validación) y las conclusiones de negocio. Ideal para mostrar profundidad técnica ante un comité de reclutamiento.
+          </p>
+          <div class="tags">[ pandas · xgboost · matplotlib ]</div>
+        </div>
+
+        <div class="paper">
+          <span class="paper-title">Nombre del Dashboard</span>
+          <span class="coauthors">Dashboard interactivo construido con Streamlit</span>
+          <div class="paper-links">
+            <span class="paper-button" data-abstract="abstract_tool1">[ <span class="abstract-link">descripción</span> | <a href="https://tuapp.streamlit.app" target="_blank">abrir app ↗</a> ]</span>
+          </div>
+          <div class="abstract" id="abstract_tool1">
+            <p>Describe qué permite hacer la herramienta: qué datos consume, qué preguntas responde, quién la usaría.</p>
+            <p class="note">Nota: la app puede tardar unos segundos en cargar la primera vez (modo sleep de Streamlit Community Cloud).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EDUCACIÓN ===== -->
+      <section class="tab-panel" data-panel="educacion" hidden>
+        <h2>Educación</h2>
+
+        <div class="paper">
+          <span class="paper-title">Título — Universidad</span>
+          <span class="paper-status">Año</span>
+        </div>
+
+        <div class="paper">
+          <span class="paper-title">Certificación / Diplomado — Institución</span>
+          <span class="paper-status">Año</span>
+        </div>
+      </section>
 
     </div>
   </div>
 
   <script>
+    // Toggle de abstracts (resumen / detalle)
     document.querySelectorAll('.abstract-link').forEach(button => {
       button.addEventListener('click', () => {
         const abstractId = button.parentElement.getAttribute('data-abstract');
@@ -163,6 +227,37 @@
         abstract.style.display = isOpen ? 'none' : 'block';
       });
     });
+
+    // Pestañas de categoría
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    function activateTab(tabName, updateHash = true) {
+      const target = [...tabButtons].find(b => b.dataset.tab === tabName);
+      if (!target) return;
+
+      tabButtons.forEach(b => b.classList.remove('active'));
+      target.classList.add('active');
+
+      panels.forEach(p => {
+        p.hidden = p.dataset.panel !== tabName;
+      });
+
+      if (updateHash) {
+        history.replaceState(null, '', '#' + tabName);
+      }
+    }
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => activateTab(btn.dataset.tab));
+    });
+
+    // Soporta abrir directo en una pestaña vía URL (#experiencia, #proyectos, #educacion)
+    const initialTab = window.location.hash.replace('#', '');
+    const validTabs = [...tabButtons].map(b => b.dataset.tab);
+    if (validTabs.includes(initialTab)) {
+      activateTab(initialTab, false);
+    }
   </script>
 
 </body>
