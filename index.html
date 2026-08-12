@@ -36,13 +36,13 @@
     </div>
     <div class="subtitle-links">
       <span class="bracket">[</span>
-      <a target="_blank" href="./CV_Richard Briones Matus">cv</a>
+      <a target="_blank" href="./CV_Richard_Briones.pdf"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>cv</a>
       <span class="sep">|</span>
-      <a target="_blank" href="https://linkedin.com/in/tu-usuario">linkedin</a>
+      <a target="_blank" href="https://linkedin.com/in/tu-usuario"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 15l6-6"/><path d="M10 6l1-1a4 4 0 015.5 5.5l-1 1"/><path d="M14 18l-1 1A4 4 0 017.5 13.5l1-1"/></svg>linkedin</a>
       <span class="sep">|</span>
-      <a target="_blank" href="https://github.com/tu-usuario">github</a>
+      <a target="_blank" href="https://github.com/tu-usuario"><svg class="icon icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>github</a>
       <span class="sep">|</span>
-      <a target="_blank" href="mailto:tu@email.com">email</a>
+      <a target="_blank" href="mailto:tu@email.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>email</a>
       <span class="bracket">]</span>
     </div>
   </div>
@@ -51,7 +51,7 @@
 
     <div class="left-section">
       <div class="profile-photo">
-        <img src="./photo.jpg" alt="Richard Briones Matus" />
+        <img src="./foto.jpg" alt="Richard Briones Matus" />
       </div>
 
       <div class="info">
@@ -64,11 +64,11 @@
         </p>
 
         <p>
-          <span class="info-label">Based in</span> Santiago, Chile
+          <span class="info-label">Based in</span> <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7.58 7-12a7 7 0 10-14 0c0 4.42 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Santiago, Chile
         </p>
 
         <p>
-          <span class="info-label">Contact</span> <a target="_blank" href="mailto:tu@email.com">tu@email.com</a>
+          <span class="info-label">Contact</span> <a target="_blank" href="mailto:tu@email.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>tu@email.com</a>
         </p>
       </div>
 
@@ -117,20 +117,20 @@
 
     <div class="right-section">
 
-      <nav class="tabs" aria-label="Categorías">
+      <nav class="tabs" aria-label="Categorías" role="tablist">
         <span class="bracket">[</span>
-        <button class="tab-btn active" data-tab="presentacion">Presentación</button>
+        <button class="tab-btn active" data-tab="presentacion" role="tab" aria-selected="true" aria-controls="panel-presentacion" id="tab-presentacion">Presentación</button>
         <span class="sep">|</span>
-        <button class="tab-btn" data-tab="experiencia">Experiencia</button>
+        <button class="tab-btn" data-tab="experiencia" role="tab" aria-selected="false" aria-controls="panel-experiencia" id="tab-experiencia">Experiencia</button>
         <span class="sep">|</span>
-        <button class="tab-btn" data-tab="proyectos">Proyectos</button>
+        <button class="tab-btn" data-tab="proyectos" role="tab" aria-selected="false" aria-controls="panel-proyectos" id="tab-proyectos">Proyectos</button>
         <span class="sep">|</span>
-        <button class="tab-btn" data-tab="educacion">Educación</button>
+        <button class="tab-btn" data-tab="educacion" role="tab" aria-selected="false" aria-controls="panel-educacion" id="tab-educacion">Educación</button>
         <span class="bracket">]</span>
       </nav>
 
       <!-- ===== PRESENTACIÓN ===== -->
-      <section class="tab-panel" data-panel="presentacion">
+      <section class="tab-panel" data-panel="presentacion" id="panel-presentacion" role="tabpanel" aria-labelledby="tab-presentacion">
         <h2><span class="section-mark">§01</span> Presentación</h2>
         <p class="intro-text">
           Soy analista de datos con base en Santiago, especializado en transformar información dispersa
@@ -172,7 +172,7 @@
       </section>
 
       <!-- ===== EXPERIENCIA ===== -->
-      <section class="tab-panel" data-panel="experiencia" hidden>
+      <section class="tab-panel" data-panel="experiencia" id="panel-experiencia" role="tabpanel" aria-labelledby="tab-experiencia" hidden>
         <h2><span class="section-mark">§02</span> Experiencia</h2>
 
         <div class="paper">
@@ -180,7 +180,7 @@
           <span class="paper-status">Mar 2024 — Presente</span>
           <p class="result-line">Logro clave: redujo el ciclo de reporting semanal de 6h a 2h automatizando la ingesta de datos.</p>
           <div class="paper-links">
-            <span class="paper-button" data-abstract="abstract_exp1">[ <span class="abstract-link">detalle <span class="chevron">▾</span></span> ]</span>
+            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_exp1">[ detalle <span class="chevron">▾</span> ]</button>
           </div>
           <p class="abstract" id="abstract_exp1">
             Responsable del reporting comercial y financiero para tres áreas de negocio. Diseñé e implementé
@@ -196,7 +196,7 @@
           <span class="paper-status">Ene 2022 — Feb 2024</span>
           <p class="result-line">Logro clave: construyó el primer modelo de scoring de riesgo de churn del equipo.</p>
           <div class="paper-links">
-            <span class="paper-button" data-abstract="abstract_exp2">[ <span class="abstract-link">detalle <span class="chevron">▾</span></span> ]</span>
+            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_exp2">[ detalle <span class="chevron">▾</span> ]</button>
           </div>
           <p class="abstract" id="abstract_exp2">
             Apoyé al equipo de negocio con análisis ad-hoc y reporting recurrente. Desarrollé un modelo
@@ -209,15 +209,29 @@
       </section>
 
       <!-- ===== PROYECTOS ===== -->
-      <section class="tab-panel" data-panel="proyectos" hidden>
+      <section class="tab-panel" data-panel="proyectos" id="panel-proyectos" role="tabpanel" aria-labelledby="tab-proyectos" hidden>
         <h2><span class="section-mark">§03</span> Proyectos</h2>
 
-        <div class="paper paper--featured">
+        <div class="filter-row" role="group" aria-label="Filtrar proyectos por tecnología">
+          <span class="filter-label">Filtrar</span>
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="python">Python</button>
+          <button class="filter-btn" data-filter="sql">SQL</button>
+          <button class="filter-btn" data-filter="streamlit">Streamlit</button>
+          <button class="filter-btn" data-filter="xgboost">XGBoost</button>
+          <button class="filter-btn" data-filter="bigquery">BigQuery</button>
+        </div>
+
+        <div class="paper paper--featured" data-tags="pandas xgboost sql">
           <span class="paper-title">Motor de Segmentación de Churn</span>
           <span class="paper-status">análisis exploratorio + modelo predictivo</span>
           <p class="result-line">Resultado clave: identificó el segmento con mayor riesgo de churn (18% del total de clientes).</p>
           <div class="paper-links">
-            <span class="paper-button" data-abstract="abstract_case1">[ <span class="abstract-link">resumen <span class="chevron">▾</span></span> | <a href="#" target="_blank">notebook</a> | <a href="#" target="_blank">reporte pdf</a> ]</span>
+            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_case1">[ resumen <span class="chevron">▾</span> ]</button>
+            <span class="paper-links-extra">
+              <a href="#" target="_blank"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>notebook</a>
+              <a href="#" target="_blank"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>reporte pdf</a>
+            </span>
           </div>
           <p class="abstract" id="abstract_case1">
             Case study completo: definición del problema de negocio, preparación de datos (features de
@@ -232,8 +246,9 @@
               <span class="code-dot code-dot--y"></span>
               <span class="code-dot code-dot--g"></span>
               <span class="code-panel-title">churn_segments.sql</span>
+              <button class="copy-btn" type="button" data-copy-target="sql-snippet-1">copiar</button>
             </div>
-            <pre class="code-panel-body"><code><span class="tok-kw">select</span>
+            <pre class="code-panel-body"><code id="sql-snippet-1"><span class="tok-kw">select</span>
   customer_id,
   <span class="tok-fn">datediff</span>(<span class="tok-kw">current_date</span>, last_active_at) <span class="tok-kw">as</span> days_inactive,
   <span class="tok-fn">round</span>(churn_score, <span class="tok-num">3</span>) <span class="tok-kw">as</span> churn_score
@@ -245,11 +260,15 @@
           <div class="tags"><span class="code-badge">pandas</span><span class="code-badge">xgboost</span><span class="code-badge">sql</span></div>
         </div>
 
-        <div class="paper">
+        <div class="paper" data-tags="python sql bigquery">
           <span class="paper-title">Dashboard de Ventas en Tiempo Real</span>
           <p class="result-line">Resultado clave: redujo el tiempo de reporte semanal en 40%.</p>
           <div class="paper-links">
-            <span class="paper-button" data-abstract="abstract_proj1">[ <span class="abstract-link">resumen <span class="chevron">▾</span></span> | <a href="#" target="_blank">live demo ↗</a> | <a href="#" target="_blank">github</a> ]</span>
+            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_proj1">[ resumen <span class="chevron">▾</span> ]</button>
+            <span class="paper-links-extra">
+              <a href="#" target="_blank"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>live demo</a>
+              <a href="#" target="_blank"><svg class="icon icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>github</a>
+            </span>
           </div>
           <p class="abstract" id="abstract_proj1">
             Pipeline de ETL que consolida datos de ventas desde múltiples fuentes en BigQuery, con un
@@ -259,11 +278,14 @@
           <div class="tags"><span class="code-badge">python</span><span class="code-badge">sql</span><span class="code-badge">bigquery</span></div>
         </div>
 
-        <div class="paper">
+        <div class="paper" data-tags="streamlit plotly pandas">
           <span class="paper-title">Explorador de Cohortes de Retención</span>
           <span class="coauthors">Dashboard interactivo construido con Streamlit</span>
           <div class="paper-links">
-            <span class="paper-button" data-abstract="abstract_tool1">[ <span class="abstract-link">descripción <span class="chevron">▾</span></span> | <a href="https://tuapp.streamlit.app" target="_blank">abrir app ↗</a> ]</span>
+            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_tool1">[ descripción <span class="chevron">▾</span> ]</button>
+            <span class="paper-links-extra">
+              <a href="https://tuapp.streamlit.app" target="_blank"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10"/><path d="M12 20V4"/><path d="M20 20v-7"/></svg>abrir app</a>
+            </span>
           </div>
           <div class="abstract" id="abstract_tool1">
             <p>Permite explorar cohortes de usuarios por fecha de adquisición y canal, visualizando curvas
@@ -273,10 +295,12 @@
           </div>
           <div class="tags"><span class="code-badge">streamlit</span><span class="code-badge">plotly</span><span class="code-badge">pandas</span></div>
         </div>
+
+        <p class="filter-empty" hidden>No hay proyectos con esta tecnología todavía.</p>
       </section>
 
       <!-- ===== EDUCACIÓN ===== -->
-      <section class="tab-panel" data-panel="educacion" hidden>
+      <section class="tab-panel" data-panel="educacion" id="panel-educacion" role="tabpanel" aria-labelledby="tab-educacion" hidden>
         <h2><span class="section-mark">§04</span> Educación</h2>
 
         <div class="paper">
@@ -298,25 +322,28 @@
   </footer>
 
   <script>
-    // Toggle de abstracts (resumen / detalle)
+    // Toggle de abstracts (resumen / detalle) con soporte ARIA
     document.querySelectorAll('.abstract-link').forEach(button => {
       button.addEventListener('click', () => {
-        const wrapper = button.closest('.paper-button');
-        const abstractId = wrapper.getAttribute('data-abstract');
+        const abstractId = button.getAttribute('aria-controls');
         const abstract = document.getElementById(abstractId);
         const isOpen = abstract.classList.contains('is-open');
 
         document.querySelectorAll('.abstract').forEach(p => p.classList.remove('is-open'));
-        document.querySelectorAll('.abstract-link').forEach(l => l.classList.remove('is-open'));
+        document.querySelectorAll('.abstract-link').forEach(l => {
+          l.classList.remove('is-open');
+          l.setAttribute('aria-expanded', 'false');
+        });
 
         if (!isOpen) {
           abstract.classList.add('is-open');
           button.classList.add('is-open');
+          button.setAttribute('aria-expanded', 'true');
         }
       });
     });
 
-    // Pestañas de categoría
+    // Pestañas de categoría con soporte ARIA
     const tabButtons = document.querySelectorAll('.tab-btn');
     const panels = document.querySelectorAll('.tab-panel');
 
@@ -324,8 +351,12 @@
       const target = [...tabButtons].find(b => b.dataset.tab === tabName);
       if (!target) return;
 
-      tabButtons.forEach(b => b.classList.remove('active'));
+      tabButtons.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
       target.classList.add('active');
+      target.setAttribute('aria-selected', 'true');
 
       panels.forEach(p => {
         p.hidden = p.dataset.panel !== tabName;
@@ -346,6 +377,53 @@
     if (validTabs.includes(initialTab)) {
       activateTab(initialTab, false);
     }
+
+    // Filtro de proyectos por tecnología
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('#panel-proyectos .paper');
+    const emptyState = document.querySelector('.filter-empty');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        let visibleCount = 0;
+
+        projectCards.forEach(card => {
+          const tags = (card.dataset.tags || '').split(' ');
+          const show = filter === 'todos' || tags.includes(filter);
+          card.hidden = !show;
+          if (show) visibleCount++;
+        });
+
+        if (emptyState) emptyState.hidden = visibleCount > 0;
+      });
+    });
+
+    // Copiar fragmento SQL al portapapeles
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const targetId = btn.getAttribute('data-copy-target');
+        const codeEl = document.getElementById(targetId);
+        if (!codeEl) return;
+
+        try {
+          await navigator.clipboard.writeText(codeEl.textContent);
+          const original = btn.textContent;
+          btn.textContent = '¡copiado!';
+          btn.classList.add('is-copied');
+          setTimeout(() => {
+            btn.textContent = original;
+            btn.classList.remove('is-copied');
+          }, 1500);
+        } catch (err) {
+          btn.textContent = 'error';
+          setTimeout(() => { btn.textContent = 'copiar'; }, 1500);
+        }
+      });
+    });
 
     document.getElementById('footer-year').textContent = new Date().getFullYear();
   </script>
