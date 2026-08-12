@@ -1,7 +1,8 @@
 :root {
   --bg: #FAFAF8;
-  --text: #1C1C1A;
+  --text: #2A2A26;
   --text-secondary: #5B5B54;
+  --heading: #0E0E0C;
   --accent: #2B4A3F;
   --accent-soft: #3E6656;
   --border: #DEDCD3;
@@ -53,7 +54,8 @@ a:focus-visible {
 
 .title {
   font-family: var(--serif);
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--heading);
   font-size: 2.1rem;
   margin: 0;
   letter-spacing: -0.01em;
@@ -104,6 +106,7 @@ a:focus-visible {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border: 1px solid var(--border);
+  border-radius: 50%;
   filter: grayscale(15%);
 }
 
@@ -163,7 +166,8 @@ a:focus-visible {
 
 .right-section h2 {
   font-family: var(--serif);
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--heading);
   font-size: 1.3rem;
   margin: 40px 0 18px;
 }
@@ -184,7 +188,8 @@ a:focus-visible {
 
 .paper-title {
   font-family: var(--serif);
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--heading);
   font-size: 1.05rem;
   display: block;
 }
@@ -254,6 +259,56 @@ a:focus-visible {
   margin-top: 10px;
 }
 
+/* ---------- Tabs ---------- */
+
+.tabs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 4px 2px;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+
+.tab-btn:hover {
+  color: var(--accent);
+}
+
+.tab-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.tab-btn:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 2px;
+}
+
+.tab-panel h2:first-child,
+.tab-panel h2 {
+  margin-top: 0;
+}
+
+.intro-text {
+  font-size: 0.95rem;
+  margin: 0 0 16px;
+  max-width: 60ch;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 680px) {
@@ -285,3 +340,4 @@ a:focus-visible {
     transition: none !important;
   }
 }
+
