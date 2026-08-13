@@ -23,7 +23,7 @@
 
 <body>
 
-  <div class="header">
+  <header class="header">
     <div class="header-row">
       <div>
         <p class="eyebrow">Curriculum Vitae · Rev. 2026.08 · Santiago, CL</p>
@@ -46,11 +46,11 @@
       <a target="_blank" href="mailto:tu@email.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>email</a>
       <span class="bracket">]</span>
     </div>
-  </div>
+  </header>
 
   <div class="main-content">
 
-    <div class="left-section">
+    <aside class="left-section">
       <div class="profile-photo">
         <img src="./foto.jpg" alt="Richard Briones Matus" />
       </div>
@@ -114,12 +114,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </aside>
 
-    <div class="right-section">
+    <main class="right-section">
 
       <nav class="tabs" aria-label="Categorías" role="tablist">
-        <span class="bracket">[</span>
         <button class="tab-btn active" data-tab="presentacion" role="tab" aria-selected="true" aria-controls="panel-presentacion" id="tab-presentacion">Presentación</button>
         <span class="sep">|</span>
         <button class="tab-btn" data-tab="experiencia" role="tab" aria-selected="false" aria-controls="panel-experiencia" id="tab-experiencia">Experiencia</button>
@@ -127,7 +126,6 @@
         <button class="tab-btn" data-tab="proyectos" role="tab" aria-selected="false" aria-controls="panel-proyectos" id="tab-proyectos">Proyectos</button>
         <span class="sep">|</span>
         <button class="tab-btn" data-tab="educacion" role="tab" aria-selected="false" aria-controls="panel-educacion" id="tab-educacion">Educación</button>
-        <span class="bracket">]</span>
       </nav>
 
       <!-- ===== PRESENTACIÓN ===== -->
@@ -142,7 +140,7 @@
         <p class="intro-text">
           Me interesan especialmente los problemas de <em>revenue</em>, retención y eficiencia operativa —
           casos donde un modelo o un dashboard bien diseñado cambia directamente cómo el negocio toma
-          decisiones. Trabajo cómodo tanto en el detalle del código como en la conversación con stakeholders.
+          decisiones.
         </p>
 
         <div class="metrics-strip" aria-label="Métricas de impacto">
@@ -176,45 +174,53 @@
       <section class="tab-panel" data-panel="experiencia" id="panel-experiencia" role="tabpanel" aria-labelledby="tab-experiencia" hidden>
         <h2><span class="section-mark">§02</span> Experiencia</h2>
 
-        <div class="paper">
+        <article class="paper owid-card">
+          <div class="owid-card-meta">
+            <span class="owid-topic-badge">Experiencia Principal</span>
+            <span class="owid-data-status">Mar 2024 — Presente</span>
+          </div>
           <span class="paper-title">Data Analyst — Empresa</span>
-          <span class="paper-status">Mar 2024 — Presente</span>
-          <p class="result-line">Logro clave: redujo el ciclo de reporting semanal de 6h a 2h automatizando la ingesta de datos.</p>
+          <div class="owid-takeaway">
+            <strong>Logro clave:</strong> Redujo el ciclo de reporting semanal de 6h a 2h automatizando la ingesta de datos.
+          </div>
           <div class="paper-links">
-            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_exp1">[ detalle <span class="chevron">▾</span> ]</button>
+            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_exp1">[ ver metodología y responsabilidades <span class="chevron">▾</span> ]</button>
           </div>
           <p class="abstract" id="abstract_exp1">
             Responsable del reporting comercial y financiero para tres áreas de negocio. Diseñé e implementé
             pipelines de ETL en SQL y Python que consolidan fuentes dispersas en un modelo único, y construí
-            dashboards en Power BI usados semanalmente por el equipo directivo. Lideré además la migración de
-            reportes manuales en Excel a un flujo automatizado, liberando cerca de 15 horas-persona por mes.
+            dashboards en Power BI usados semanalmente por el equipo directivo.
           </p>
           <div class="tags"><span class="code-badge">sql</span><span class="code-badge">python</span><span class="code-badge">power bi</span></div>
-        </div>
+        </article>
 
-        <div class="paper">
+        <article class="paper owid-card">
+          <div class="owid-card-meta">
+            <span class="owid-topic-badge">Rol Previo</span>
+            <span class="owid-data-status">Ene 2022 — Feb 2024</span>
+          </div>
           <span class="paper-title">Analista Junior — Empresa Anterior</span>
-          <span class="paper-status">Ene 2022 — Feb 2024</span>
-          <p class="result-line">Logro clave: construyó el primer modelo de scoring de riesgo de churn del equipo.</p>
+          <div class="owid-takeaway">
+            <strong>Logro clave:</strong> Construyó el primer modelo de scoring de riesgo de churn del equipo.
+          </div>
           <div class="paper-links">
-            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_exp2">[ detalle <span class="chevron">▾</span> ]</button>
+            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_exp2">[ ver detalle <span class="chevron">▾</span> ]</button>
           </div>
           <p class="abstract" id="abstract_exp2">
             Apoyé al equipo de negocio con análisis ad-hoc y reporting recurrente. Desarrollé un modelo
             de clasificación para identificar clientes con alta probabilidad de churn, que pasó a integrarse
-            en el proceso mensual de retención. Aprendí a traducir hallazgos técnicos en recomendaciones
-            accionables para audiencias no técnicas.
+            en el proceso mensual de retención.
           </p>
           <div class="tags"><span class="code-badge">python</span><span class="code-badge">scikit-learn</span><span class="code-badge">excel</span></div>
-        </div>
+        </article>
       </section>
 
       <!-- ===== PROYECTOS ===== -->
       <section class="tab-panel" data-panel="proyectos" id="panel-proyectos" role="tabpanel" aria-labelledby="tab-proyectos" hidden>
-        <h2><span class="section-mark">§03</span> Proyectos</h2>
+        <h2><span class="section-mark">§03</span> Proyectos de Investigación y Datos</h2>
 
         <div class="filter-row" role="group" aria-label="Filtrar proyectos por tecnología">
-          <span class="filter-label">Filtrar</span>
+          <span class="filter-label">Filtrar por</span>
           <button class="filter-btn active" data-filter="todos">Todos</button>
           <button class="filter-btn" data-filter="python">Python</button>
           <button class="filter-btn" data-filter="sql">SQL</button>
@@ -223,130 +229,150 @@
           <button class="filter-btn" data-filter="bigquery">BigQuery</button>
         </div>
 
-        <div class="paper paper--featured reveal" data-tags="pandas xgboost sql">
-          <span class="paper-title">Motor de Segmentación de Churn</span>
-          <span class="paper-status">análisis exploratorio + modelo predictivo</span>
-          <p class="result-line">Resultado clave: identificó el segmento con mayor riesgo de churn (18% del total de clientes).</p>
+        <!-- PROYECTO 1 -->
+        <article class="paper owid-card paper--featured reveal" data-tags="pandas xgboost sql">
+          <div class="owid-card-meta">
+            <span class="owid-topic-badge">Case Study &amp; Modelo</span>
+            <span class="owid-data-status">🟢 Validado en Holdout</span>
+          </div>
 
-          <figure class="project-figure">
-            <svg class="project-figure-svg" viewBox="0 0 480 190" role="img" aria-label="Vista previa: barras de riesgo de churn por segmento">
-              <line class="fig-axis" x1="26" y1="160" x2="454" y2="160"/>
-              <rect class="fig-bar" x="52" y="112" width="42" height="48"/>
-              <rect class="fig-bar" x="126" y="82" width="42" height="78"/>
-              <rect class="fig-bar" x="200" y="128" width="42" height="32"/>
-              <rect class="fig-bar" x="274" y="64" width="42" height="96"/>
-              <rect class="fig-bar fig-bar--highlight" x="348" y="40" width="42" height="120"/>
-              <rect class="fig-bar" x="422" y="96" width="32" height="64"/>
-            </svg>
-            <figcaption class="figure-caption"><span class="fig-num">Fig. 01</span>Riesgo de churn por segmento de cliente</figcaption>
-          </figure>
+          <span class="paper-title">Motor de Segmentación y Predicción de Churn</span>
+
+          <div class="owid-takeaway">
+            <strong>Key Takeaway:</strong> El modelo identificó que el 18% de la base concentra el 74% de las fugas de ingresos, permitiendo una campaña preventiva focalizada.
+          </div>
+
+          <!-- Marco conmutador OWID (Gráfico / SQL) -->
+          <div class="owid-viewer-frame">
+            <div class="owid-viewer-toolbar">
+              <span class="owid-viewer-title">Fig 01. Distribución de Riesgo de Churn</span>
+              <div class="owid-toggle-group">
+                <button class="owid-toggle-btn active" data-view="chart">Gráfico</button>
+                <button class="owid-toggle-btn" data-view="code">Consulta SQL</button>
+              </div>
+            </div>
+
+            <!-- Vista Gráfico -->
+            <div class="owid-view-content view-chart">
+              <figure class="project-figure">
+                <svg class="project-figure-svg" viewBox="0 0 480 160" role="img" aria-label="Vista previa: barras de riesgo de churn por segmento">
+                  <line class="fig-axis" x1="26" y1="140" x2="454" y2="140"/>
+                  <rect class="fig-bar" x="52" y="92" width="42" height="48"/>
+                  <rect class="fig-bar" x="126" y="62" width="42" height="78"/>
+                  <rect class="fig-bar" x="200" y="108" width="42" height="32"/>
+                  <rect class="fig-bar" x="274" y="44" width="42" height="96"/>
+                  <rect class="fig-bar fig-bar--highlight" x="348" y="20" width="42" height="120"/>
+                  <rect class="fig-bar" x="422" y="76" width="32" height="64"/>
+                </svg>
+                <figcaption class="figure-caption"><span class="fig-num">Fig. 01</span> Scoring relativo de probabilidad de abandono por cohorte transaccional.</figcaption>
+              </figure>
+            </div>
+
+            <!-- Vista Código SQL -->
+            <div class="owid-view-content view-code" hidden>
+              <div class="code-panel">
+                <pre class="code-panel-body"><code><span class="tok-kw">SELECT</span>
+  customer_id,
+  <span class="tok-fn">datediff</span>(<span class="tok-kw">current_date</span>, last_active_at) <span class="tok-kw">AS</span> days_inactive,
+  <span class="tok-fn">round</span>(churn_score, <span class="tok-num">3</span>) <span class="tok-kw">AS</span> churn_score
+<span class="tok-kw">FROM</span> analytics.customer_features
+<span class="tok-kw">WHERE</span> churn_score &gt; <span class="tok-num">0.72</span>
+<span class="tok-kw">ORDER BY</span> churn_score <span class="tok-kw">DESC</span>;</code></pre>
+              </div>
+            </div>
+          </div>
 
           <div class="paper-links">
-            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_case1">[ resumen <span class="chevron">▾</span> ]</button>
+            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_case1">[ Metodología y Fuentes ▾ ]</button>
             <span class="paper-links-extra">
               <a href="#" target="_blank"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>notebook</a>
               <a href="#" target="_blank"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>reporte pdf</a>
             </span>
           </div>
-          <p class="abstract" id="abstract_case1">
-            Case study completo: definición del problema de negocio, preparación de datos (features de
-            comportamiento y transaccionales), entrenamiento y validación de un modelo XGBoost, y traducción
-            de resultados en un plan de retención priorizado por segmento. El modelo se validó contra un
-            período de holdout de tres meses antes de pasar a producción.
-          </p>
-
-          <div class="code-panel" aria-label="Fragmento de consulta SQL destacada">
-            <div class="code-panel-bar">
-              <span class="code-dot code-dot--r"></span>
-              <span class="code-dot code-dot--y"></span>
-              <span class="code-dot code-dot--g"></span>
-              <span class="code-panel-title">churn_segments.sql</span>
-              <button class="copy-btn" type="button" data-copy-target="sql-snippet-1">copiar</button>
-            </div>
-            <pre class="code-panel-body"><code id="sql-snippet-1"><span class="tok-kw">select</span>
-  customer_id,
-  <span class="tok-fn">datediff</span>(<span class="tok-kw">current_date</span>, last_active_at) <span class="tok-kw">as</span> days_inactive,
-  <span class="tok-fn">round</span>(churn_score, <span class="tok-num">3</span>) <span class="tok-kw">as</span> churn_score
-<span class="tok-kw">from</span> analytics.customer_features
-<span class="tok-kw">where</span> churn_score &gt; <span class="tok-num">0.72</span>
-<span class="tok-kw">order by</span> churn_score <span class="tok-kw">desc</span>;</code></pre>
+          <div class="abstract" id="abstract_case1">
+            <p><strong>Metodología:</strong> Preparación de features transaccionales y de comportamiento. Entrenamiento y validación de XGBoost con período holdout de 3 meses.</p>
           </div>
 
           <div class="tags"><span class="code-badge">pandas</span><span class="code-badge">xgboost</span><span class="code-badge">sql</span></div>
-        </div>
+        </article>
 
-        <div class="paper reveal" data-tags="python sql bigquery">
-          <span class="paper-title">Dashboard de Ventas en Tiempo Real</span>
-          <p class="result-line">Resultado clave: redujo el tiempo de reporte semanal en 40%.</p>
+        <!-- PROYECTO 2 -->
+        <article class="paper owid-card reveal" data-tags="python sql bigquery">
+          <div class="owid-card-meta">
+            <span class="owid-topic-badge">Dashboard en Producción</span>
+            <span class="owid-data-status">🟢 Actualizado diariamente</span>
+          </div>
 
-          <figure class="project-figure">
-            <svg class="project-figure-svg" viewBox="0 0 480 190" role="img" aria-label="Vista previa: tendencia de ventas en el tiempo">
-              <line class="fig-grid" x1="26" y1="40" x2="454" y2="40"/>
-              <line class="fig-grid" x1="26" y1="85" x2="454" y2="85"/>
-              <line class="fig-grid" x1="26" y1="130" x2="454" y2="130"/>
-              <line class="fig-axis" x1="26" y1="160" x2="454" y2="160"/>
-              <polygon class="fig-area" points="26,140 100,120 174,132 248,80 322,92 396,48 454,64 454,160 26,160"/>
-              <polyline class="fig-line" points="26,140 100,120 174,132 248,80 322,92 396,48 454,64" fill="none"/>
-              <circle id="sales-pulse-dot" class="fig-pulse-dot" r="3">
-                <animateMotion id="sales-pulse-motion" dur="10s" repeatCount="indefinite" calcMode="linear" begin="indefinite" path="M26,140 L100,120 L174,132 L248,80 L322,92 L396,48 L454,64"/>
-              </circle>
+          <span class="paper-title">Dashboard de Ventas e Ingresos en Tiempo Real</span>
+
+          <div class="owid-takeaway">
+            <strong>Key Takeaway:</strong> Automatizó la ingesta desde 4 sistemas distribuidos, eliminando 4 horas semanales de consolidación manual en Excel.
+          </div>
+
+          <figure class="project-figure" style="border: 1px solid var(--border); border-radius: 6px;">
+            <svg class="project-figure-svg" viewBox="0 0 480 150" role="img" aria-label="Vista previa: tendencia de ventas">
+              <line class="fig-grid" x1="26" y1="30" x2="454" y2="30"/>
+              <line class="fig-grid" x1="26" y1="75" x2="454" y2="75"/>
+              <line class="fig-grid" x1="26" y1="120" x2="454" y2="120"/>
+              <line class="fig-axis" x1="26" y1="140" x2="454" y2="140"/>
+              <polygon class="fig-area" points="26,120 100,100 174,112 248,60 322,72 396,28 454,44 454,140 26,140"/>
+              <polyline class="fig-line" points="26,120 100,100 174,112 248,60 322,72 396,28 454,44"/>
             </svg>
-            <figcaption class="figure-caption"><span class="fig-num">Fig. 02</span>Ventas semanales consolidadas, vista en tiempo real</figcaption>
+            <figcaption class="figure-caption"><span class="fig-num">Fig. 02</span> Monitoreo en vivo de ventas semanales consolidadas en BigQuery.</figcaption>
           </figure>
 
           <div class="paper-links">
-            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_proj1">[ resumen <span class="chevron">▾</span> ]</button>
+            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_proj1">[ Descripción del Pipeline ▾ ]</button>
             <span class="paper-links-extra">
               <a href="#" target="_blank"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>live demo</a>
               <a href="#" target="_blank"><svg class="icon icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>github</a>
             </span>
           </div>
-          <p class="abstract" id="abstract_proj1">
-            Pipeline de ETL que consolida datos de ventas desde múltiples fuentes en BigQuery, con un
-            dashboard interactivo en Streamlit que reemplazó un reporte manual en Excel. El equipo comercial
-            pasó de revisar cifras cada lunes a monitorear KPIs en tiempo real durante la semana.
-          </p>
+          <div class="abstract" id="abstract_proj1">
+            <p>Pipeline ETL desplegado en GCP/BigQuery que conecta los registros transaccionales con un tablero interactivo en Streamlit.</p>
+          </div>
           <div class="tags"><span class="code-badge">python</span><span class="code-badge">sql</span><span class="code-badge">bigquery</span></div>
-        </div>
+        </article>
 
-        <div class="paper reveal" data-tags="streamlit plotly pandas">
-          <span class="paper-title">Explorador de Cohortes de Retención</span>
-          <span class="coauthors">Dashboard interactivo construido con Streamlit</span>
+        <!-- PROYECTO 3 -->
+        <article class="paper owid-card reveal" data-tags="streamlit plotly pandas">
+          <div class="owid-card-meta">
+            <span class="owid-topic-badge">Data App Interactiva</span>
+            <span class="owid-data-status">Cloud Hosted</span>
+          </div>
 
-          <figure class="project-figure">
-            <svg class="project-figure-svg" viewBox="0 0 480 150" role="img" aria-label="Vista previa: mapa de calor de cohortes de retención">
-              <rect class="fig-cell-100" x="26" y="14" width="60" height="24"/>
-              <rect class="fig-cell-75" x="94" y="14" width="60" height="24"/>
-              <rect class="fig-cell-50" x="162" y="14" width="60" height="24"/>
-              <rect class="fig-cell-25" x="230" y="14" width="60" height="24"/>
-              <rect class="fig-cell-25" x="298" y="14" width="60" height="24"/>
-              <rect class="fig-cell-100" x="26" y="46" width="60" height="24"/>
-              <rect class="fig-cell-75" x="94" y="46" width="60" height="24"/>
-              <rect class="fig-cell-75" x="162" y="46" width="60" height="24"/>
-              <rect class="fig-cell-50" x="230" y="46" width="60" height="24"/>
-              <rect class="fig-cell-100" x="26" y="78" width="60" height="24"/>
-              <rect class="fig-cell-100" x="94" y="78" width="60" height="24"/>
-              <rect class="fig-cell-50" x="162" y="78" width="60" height="24"/>
-              <rect class="fig-cell-100" x="26" y="110" width="60" height="24"/>
-              <rect class="fig-cell-75" x="94" y="110" width="60" height="24"/>
+          <span class="paper-title">Explorador de Cohortes y Retención de Usuarios</span>
+
+          <div class="owid-takeaway">
+            <strong>Key Takeaway:</strong> Permite a los equipos de Producto y Growth evaluar la retención acumulada a 30, 60 y 90 días sin requerir consultas SQL manuales.
+          </div>
+
+          <figure class="project-figure" style="border: 1px solid var(--border); border-radius: 6px;">
+            <svg class="project-figure-svg" viewBox="0 0 480 130" role="img" aria-label="Mapa de calor">
+              <rect class="fig-cell-100" x="26" y="14" width="60" height="22"/>
+              <rect class="fig-cell-75" x="94" y="14" width="60" height="22"/>
+              <rect class="fig-cell-50" x="162" y="14" width="60" height="22"/>
+              <rect class="fig-cell-25" x="230" y="14" width="60" height="22"/>
+              <rect class="fig-cell-100" x="26" y="42" width="60" height="22"/>
+              <rect class="fig-cell-75" x="94" y="42" width="60" height="22"/>
+              <rect class="fig-cell-50" x="162" y="42" width="60" height="22"/>
+              <rect class="fig-cell-100" x="26" y="70" width="60" height="22"/>
+              <rect class="fig-cell-75" x="94" y="70" width="60" height="22"/>
             </svg>
-            <figcaption class="figure-caption"><span class="fig-num">Fig. 03</span>Retención por cohorte de adquisición</figcaption>
+            <figcaption class="figure-caption"><span class="fig-num">Fig. 03</span> Matriz de retención por cohorte mensual de adquisición.</figcaption>
           </figure>
 
           <div class="paper-links">
-            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_tool1">[ descripción <span class="chevron">▾</span> ]</button>
+            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_tool1">[ Ver Arquitectura ▾ ]</button>
             <span class="paper-links-extra">
               <a href="https://tuapp.streamlit.app" target="_blank"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10"/><path d="M12 20V4"/><path d="M20 20v-7"/></svg>abrir app</a>
             </span>
           </div>
           <div class="abstract" id="abstract_tool1">
-            <p>Permite explorar cohortes de usuarios por fecha de adquisición y canal, visualizando curvas
-            de retención y valor acumulado. Pensado para que producto y marketing prioricen canales sin
-            depender de un analista para cada consulta.</p>
-            <p class="note">Nota: la app puede tardar unos segundos en cargar la primera vez (modo sleep de Streamlit Community Cloud).</p>
+            <p>Calcula automáticamente matrices de cohortes y curvas de supervivencia utilizando Pandas y Plotly.</p>
           </div>
           <div class="tags"><span class="code-badge">streamlit</span><span class="code-badge">plotly</span><span class="code-badge">pandas</span></div>
-        </div>
+        </article>
 
         <p class="filter-empty" hidden>No hay proyectos con esta tecnología todavía.</p>
       </section>
@@ -355,18 +381,18 @@
       <section class="tab-panel" data-panel="educacion" id="panel-educacion" role="tabpanel" aria-labelledby="tab-educacion" hidden>
         <h2><span class="section-mark">§04</span> Educación</h2>
 
-        <div class="paper">
-          <span class="paper-title">Título — Universidad</span>
+        <article class="paper owid-card">
+          <span class="paper-title">Título Universitario — Universidad</span>
           <span class="paper-status">Año</span>
-        </div>
+        </article>
 
-        <div class="paper">
+        <article class="paper owid-card">
           <span class="paper-title">Certificación / Diplomado — Institución</span>
           <span class="paper-status">Año</span>
-        </div>
+        </article>
       </section>
 
-    </div>
+    </main>
   </div>
 
   <footer class="footer">
@@ -374,21 +400,7 @@
   </footer>
 
   <script>
-    // Variables de animaciones declaradas al inicio para evitar ReferenceError
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const salesMotion = document.getElementById('sales-pulse-motion');
-    let salesMotionStarted = false;
-
-    if (salesMotion && prefersReducedMotion) {
-      salesMotion.remove();
-      const dot = document.getElementById('sales-pulse-dot');
-      if (dot) {
-        dot.setAttribute('cx', '454');
-        dot.setAttribute('cy', '64');
-      }
-    }
-
-    // Toggle de abstracts (resumen / detalle)
+    // Toggle de abstracts
     document.querySelectorAll('.abstract-link').forEach(button => {
       button.addEventListener('click', () => {
         const abstractId = button.getAttribute('aria-controls');
@@ -409,6 +421,29 @@
       });
     });
 
+    // Toggle de pestañas OWID (Gráfico vs SQL)
+    document.querySelectorAll('.owid-viewer-frame').forEach(frame => {
+      const btns = frame.querySelectorAll('.owid-toggle-btn');
+      const chartView = frame.querySelector('.view-chart');
+      const codeView = frame.querySelector('.view-code');
+
+      btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          btns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          if (btn.dataset.view === 'chart') {
+            chartView.hidden = false;
+            codeView.hidden = true;
+          } else {
+            chartView.hidden = true;
+            codeView.hidden = false;
+          }
+        });
+      });
+    });
+
+    // Pestañas principales
     const tabButtons = document.querySelectorAll('.tab-btn');
     const panels = document.querySelectorAll('.tab-panel');
     const proyectosPanel = document.getElementById('panel-proyectos');
@@ -420,7 +455,7 @@
         c.classList.remove('is-visible');
         c.style.transitionDelay = (i * 80) + 'ms';
       });
-      void proyectosPanel.offsetHeight; // Reflow para reiniciar transición
+      void proyectosPanel.offsetHeight;
       requestAnimationFrame(() => {
         cards.forEach(c => c.classList.add('is-visible'));
       });
@@ -443,10 +478,6 @@
 
       if (tabName === 'proyectos') {
         playProjectReveal();
-        if (salesMotion && !salesMotionStarted && !prefersReducedMotion) {
-          salesMotion.beginElement();
-          salesMotionStarted = true;
-        }
       }
 
       if (updateHash) {
@@ -458,7 +489,6 @@
       btn.addEventListener('click', () => activateTab(btn.dataset.tab));
     });
 
-    // Abrir pestaña vía hash de la URL
     const initialTab = window.location.hash.replace('#', '');
     const validTabs = [...tabButtons].map(b => b.dataset.tab);
     if (validTabs.includes(initialTab)) {
@@ -490,33 +520,7 @@
       });
     });
 
-    // Copiar código SQL
-    document.querySelectorAll('.copy-btn').forEach(btn => {
-      btn.addEventListener('click', async () => {
-        const targetId = btn.getAttribute('data-copy-target');
-        const codeEl = document.getElementById(targetId);
-        if (!codeEl) return;
-
-        try {
-          await navigator.clipboard.writeText(codeEl.textContent);
-          const original = btn.textContent;
-          btn.textContent = '¡copiado!';
-          btn.classList.add('is-copied');
-          setTimeout(() => {
-            btn.textContent = original;
-            btn.classList.remove('is-copied');
-          }, 1500);
-        } catch (err) {
-          btn.textContent = 'error';
-          setTimeout(() => { btn.textContent = 'copiar'; }, 1500);
-        }
-      });
-    });
-
-    const footerYear = document.getElementById('footer-year');
-    if (footerYear) {
-      footerYear.textContent = new Date().getFullYear();
-    }
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
   </script>
 
 </body>
