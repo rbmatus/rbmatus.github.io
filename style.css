@@ -447,6 +447,9 @@ a:focus-visible {
 .legend-mark {
   flex-shrink: 0;
   width: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-family: var(--mono);
   font-size: 0.7rem;
@@ -673,11 +676,16 @@ a:focus-visible {
 /* Mini caso de estudio (Presentación) */
 
 .preview-case {
-  margin-top: 32px;
+  margin-top: 44px;
+}
+
+.preview-case .metrics-label {
+  margin-bottom: 16px;
 }
 
 .preview-case .owid-card {
   margin-bottom: 0;
+  padding: 28px;
 }
 
 .preview-case-link {
