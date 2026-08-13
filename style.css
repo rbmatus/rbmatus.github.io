@@ -5,10 +5,10 @@
   --text: #1E293B;
   --text-secondary: #5B6770;
   --heading: #0F2042;              /* Azul marino profundo OWID */
-  --accent: #0082C8;               /* Azul brillante de datos / enlaces */
+  --accent: #2F6690;               /* Azul apagado de datos / enlaces */
   --accent-soft: #1D3557;          /* Azul marino medio */
-  --accent-signal: #D73535;        /* Rojo / coral de acento de métricas */
-  --accent-signal-soft: #E66A6A;
+  --accent-signal: #A6503D;        /* Terracota apagado de acento */
+  --accent-signal-soft: #C08072;
   --border: #E1E5EB;               /* Borde estructurado limpio */
   --border-dark: #B2C3D4;
   --tag-bg: #F0F3F6;
@@ -91,6 +91,15 @@ a:focus-visible {
   margin: 0 auto;
   padding: 48px 24px 28px;
   border-bottom: 2px solid var(--heading);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
+  transition: box-shadow 0.2s ease;
+}
+
+.header.is-scrolled {
+  box-shadow: 0 4px 14px rgba(15, 32, 66, 0.08);
 }
 
 .header-row {
@@ -233,21 +242,25 @@ a:focus-visible {
 /* ---------- Dataset meta strip ---------- */
 
 .dataset-strip {
-  background: var(--bg-raised);
-  border-bottom: 1px solid var(--border);
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .dataset-strip-inner {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 8px 24px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin: 16px 0;
+  padding: 8px 14px;
   font-family: var(--mono);
   font-size: 0.7rem;
   color: var(--text-secondary);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 6px;
+  max-width: 100%;
 }
 
 .dataset-key {
@@ -278,7 +291,7 @@ a:focus-visible {
 
 .left-section {
   position: sticky;
-  top: 40px;
+  top: calc(var(--header-h, 170px) + 24px);
 }
 
 /* Profile Card Encuadrado */
@@ -657,8 +670,8 @@ a:focus-visible {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--accent);
-  background: rgba(0, 130, 200, 0.08);
+  color: var(--heading);
+  background: var(--tag-bg);
   padding: 2px 8px;
   border-radius: 4px;
 }
@@ -683,7 +696,7 @@ a:focus-visible {
   margin: 12px 0 16px;
   padding: 10px 14px;
   background: var(--bg-raised);
-  border-left: 3px solid var(--accent-signal);
+  border-left: 2px solid var(--accent-signal);
   font-size: 0.88rem;
   color: var(--heading);
   line-height: 1.45;
