@@ -87,11 +87,15 @@
 
           <div class="info-item">
             <span class="info-label">Contacto Directo</span>
-            <p class="info-value">
+            <p class="info-value contact-row">
               <a target="_blank" href="mailto:tu@email.com" class="contact-link">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
                 tu@email.com
               </a>
+              <button class="copy-btn" type="button" data-copy="tu@email.com" aria-label="Copiar email al portapapeles" title="Copiar email">
+                <svg class="icon copy-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="1.5"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
+                <svg class="icon check-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M20 6L9 17l-5-5"/></svg>
+              </button>
             </p>
           </div>
         </div>
@@ -142,6 +146,18 @@
         </div>
       </div>
 
+      <!-- Leyenda de símbolos -->
+      <div class="legend-card">
+        <h3 class="skills-title">Cómo leer esta página</h3>
+        <ul class="legend-list">
+          <li><span class="legend-mark">🟢</span> Proyecto o dashboard activo en producción</li>
+          <li><span class="legend-mark legend-mark--bar" aria-hidden="true"></span> Hallazgo clave de un proyecto o rol</li>
+          <li><span class="legend-mark legend-mark--num">§</span> Número de sección</li>
+          <li><span class="legend-mark legend-mark--fig">Fig.</span> Figura o visualización numerada</li>
+          <li><span class="legend-mark legend-mark--toggle">⇄</span> Alterna entre gráfico y consulta SQL</li>
+        </ul>
+      </div>
+
     </aside>
 
     <main class="right-section">
@@ -154,6 +170,8 @@
         <button class="tab-btn" data-tab="proyectos" role="tab" aria-selected="false" aria-controls="panel-proyectos" id="tab-proyectos">Proyectos</button>
         <span class="sep">|</span>
         <button class="tab-btn" data-tab="educacion" role="tab" aria-selected="false" aria-controls="panel-educacion" id="tab-educacion">Educación</button>
+        <span class="sep">|</span>
+        <button class="tab-btn" data-tab="certificaciones" role="tab" aria-selected="false" aria-controls="panel-certificaciones" id="tab-certificaciones">Certificaciones</button>
       </nav>
 
       <!-- ===== PRESENTACIÓN ===== -->
@@ -195,6 +213,38 @@
               <span class="metric-spark" style="--fill: 30%" aria-hidden="true"></span>
             </div>
           </div>
+        </div>
+
+        <div class="preview-case">
+          <p class="metrics-label">Caso destacado <span class="metrics-label-sub">— vista previa de §03</span></p>
+          <article class="paper owid-card paper--featured">
+            <div class="owid-card-meta">
+              <span class="owid-topic-badge">Case Study &amp; Modelo</span>
+              <span class="owid-data-status">🟢 Validado en Holdout</span>
+            </div>
+            <span class="paper-title">Motor de Segmentación y Predicción de Churn</span>
+            <div class="owid-takeaway">
+              <strong>Key Takeaway:</strong> El modelo identificó que el 18% de la base concentra el 74% de las fugas de ingresos, permitiendo una campaña preventiva focalizada.
+            </div>
+            <figure class="project-figure">
+              <svg class="project-figure-svg" viewBox="0 0 480 130" role="img" aria-label="Vista previa: barras de riesgo de churn por segmento">
+                <line class="fig-grid" x1="26" y1="14" x2="454" y2="14"/>
+                <line class="fig-grid" x1="26" y1="62" x2="454" y2="62"/>
+                <line class="fig-axis" x1="26" y1="110" x2="454" y2="110"/>
+                <rect class="fig-bar" x="52" y="70" width="42" height="40"/>
+                <rect class="fig-bar" x="126" y="46" width="42" height="64"/>
+                <rect class="fig-bar" x="200" y="84" width="42" height="26"/>
+                <rect class="fig-bar" x="274" y="30" width="42" height="80"/>
+                <rect class="fig-bar fig-bar--highlight" x="348" y="12" width="42" height="98"/>
+                <rect class="fig-bar" x="422" y="54" width="32" height="56"/>
+              </svg>
+              <figcaption class="figure-caption"><span class="fig-num">Fig. 01</span> Scoring relativo de probabilidad de abandono por cohorte transaccional.</figcaption>
+            </figure>
+            <a class="preview-case-link" href="#proyectos" data-jump="case-churn">
+              Ver caso completo, con metodología y consulta SQL
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
         </div>
       </section>
 
@@ -259,7 +309,7 @@
         </div>
 
         <!-- PROYECTO 1 -->
-        <article class="paper owid-card paper--featured reveal" data-tags="pandas xgboost sql">
+        <article class="paper owid-card paper--featured reveal" id="case-churn" data-tags="pandas xgboost sql">
           <div class="owid-card-meta">
             <span class="owid-topic-badge">Case Study &amp; Modelo</span>
             <span class="owid-data-status">🟢 Validado en Holdout</span>
@@ -306,6 +356,20 @@
             <!-- Vista Código SQL -->
             <div class="owid-view-content view-code" hidden>
               <div class="code-panel">
+                <div class="code-panel-toolbar">
+                  <span class="code-panel-lang">sql</span>
+                  <button class="copy-code-btn" type="button" data-copy="SELECT
+  customer_id,
+  datediff(current_date, last_active_at) AS days_inactive,
+  round(churn_score, 3) AS churn_score
+FROM analytics.customer_features
+WHERE churn_score &gt; 0.72
+ORDER BY churn_score DESC;">
+                    <svg class="icon copy-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="1.5"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
+                    <svg class="icon check-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M20 6L9 17l-5-5"/></svg>
+                    <span class="copy-code-label">Copiar</span>
+                  </button>
+                </div>
                 <pre class="code-panel-body"><code><span class="tok-kw">SELECT</span>
   customer_id,
   <span class="tok-fn">datediff</span>(<span class="tok-kw">current_date</span>, last_active_at) <span class="tok-kw">AS</span> days_inactive,
@@ -432,14 +496,66 @@
       <section class="tab-panel" data-panel="educacion" id="panel-educacion" role="tabpanel" aria-labelledby="tab-educacion" hidden>
         <h2><span class="section-mark">§04</span> Educación</h2>
 
-        <article class="paper owid-card">
-          <span class="paper-title">Título Universitario — Universidad</span>
-          <span class="paper-status">Año</span>
+        <article class="paper owid-card edu-card">
+          <div class="owid-card-meta">
+            <span class="owid-topic-badge">Postgrado</span>
+            <span class="owid-data-status">2018 — 2019</span>
+          </div>
+          <span class="paper-title">Master of Science in Management</span>
+          <p class="edu-institution">Kedge Business School <span class="dot-sep">·</span> Bordeaux, Francia</p>
         </article>
 
-        <article class="paper owid-card">
-          <span class="paper-title">Certificación / Diplomado — Institución</span>
-          <span class="paper-status">Año</span>
+        <article class="paper owid-card edu-card">
+          <div class="owid-card-meta">
+            <span class="owid-topic-badge">Pregrado</span>
+            <span class="owid-data-status">2014 — 2017</span>
+          </div>
+          <span class="paper-title">Ingeniería Comercial, mención en Finanzas</span>
+          <p class="edu-institution">Universidad Nacional Andrés Bello <span class="dot-sep">·</span> Viña del Mar, Chile</p>
+        </article>
+
+        <article class="paper owid-card edu-card">
+          <div class="owid-card-meta">
+            <span class="owid-topic-badge">Educación Escolar</span>
+            <span class="owid-data-status">1998 — 2011</span>
+          </div>
+          <span class="paper-title">Educación Básica y Media</span>
+          <p class="edu-institution">Colegio The Mackay School <span class="dot-sep">·</span> Viña del Mar, Chile</p>
+        </article>
+      </section>
+
+      <!-- ===== CERTIFICACIONES ===== -->
+      <section class="tab-panel" data-panel="certificaciones" id="panel-certificaciones" role="tabpanel" aria-labelledby="tab-certificaciones" hidden>
+        <h2><span class="section-mark">§05</span> Certificaciones &amp; Cursos</h2>
+
+        <article class="paper owid-card edu-card">
+          <div class="owid-card-meta">
+            <span class="owid-topic-badge">Certificación</span>
+            <span class="owid-data-status">Año</span>
+          </div>
+          <span class="paper-title">Nombre de la Certificación</span>
+          <p class="edu-institution">Institución emisora <span class="dot-sep">·</span> Modalidad</p>
+          <div class="paper-links">
+            <a class="cert-view-link" href="./certificados/certificacion-01.jpg" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="9.5" r="1.8"/><path d="M21 15l-5-5-9 9"/></svg>
+              Ver certificado
+            </a>
+          </div>
+        </article>
+
+        <article class="paper owid-card edu-card">
+          <div class="owid-card-meta">
+            <span class="owid-topic-badge">Curso</span>
+            <span class="owid-data-status">Año</span>
+          </div>
+          <span class="paper-title">Nombre del Curso</span>
+          <p class="edu-institution">Institución emisora <span class="dot-sep">·</span> Modalidad</p>
+          <div class="paper-links">
+            <a class="cert-view-link" href="./certificados/certificacion-02.jpg" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="9.5" r="1.8"/><path d="M21 15l-5-5-9 9"/></svg>
+              Ver certificado
+            </a>
+          </div>
         </article>
       </section>
 
@@ -451,6 +567,43 @@
   </footer>
 
   <script>
+    // Botones de copiar (email, SQL, etc.)
+    function wireCopyButton(btn, extraLabel) {
+      btn.addEventListener('click', async () => {
+        const text = btn.dataset.copy;
+        try {
+          await navigator.clipboard.writeText(text);
+        } catch (err) {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+
+        const copyIcon = btn.querySelector('.copy-icon');
+        const checkIcon = btn.querySelector('.check-icon');
+        const label = btn.querySelector('.copy-code-label');
+
+        btn.classList.add('is-copied');
+        if (copyIcon) copyIcon.hidden = true;
+        if (checkIcon) checkIcon.hidden = false;
+        if (label) label.textContent = 'Copiado';
+
+        setTimeout(() => {
+          btn.classList.remove('is-copied');
+          if (copyIcon) copyIcon.hidden = false;
+          if (checkIcon) checkIcon.hidden = true;
+          if (label) label.textContent = 'Copiar';
+        }, 1500);
+      });
+    }
+
+    document.querySelectorAll('.copy-btn, .copy-code-btn').forEach(btn => wireCopyButton(btn));
+
     // Selector de categorías de Stack Técnico
     const skillCatButtons = document.querySelectorAll('.skill-cat-btn');
     const skillPanels = document.querySelectorAll('.skill-group-panel');
@@ -572,6 +725,20 @@
     if (validTabs.includes(initialTab)) {
       activateTab(initialTab, false);
     }
+
+    // Links "Ver caso completo" que saltan a otra tab y hacen scroll al elemento
+    document.querySelectorAll('[data-jump]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        activateTab('proyectos');
+        const targetEl = document.getElementById(link.dataset.jump);
+        if (targetEl) {
+          requestAnimationFrame(() => {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        }
+      });
+    });
 
     // Filtros de tecnologías
     const filterButtons = document.querySelectorAll('.filter-btn');
