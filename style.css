@@ -464,8 +464,6 @@ a:focus-visible {
   padding: 20px 0;
 }
 
-/* Figuras de proyecto (placeholders — reemplazar por <img> real) */
-
 .project-figure {
   margin: 16px 0 6px;
   border: 1px solid var(--border);
@@ -541,6 +539,11 @@ a:focus-visible {
 .fig-cell-75 { fill: var(--accent-soft); opacity: 0.65; }
 .fig-cell-50 { fill: var(--accent-soft); opacity: 0.4; }
 .fig-cell-25 { fill: var(--accent-soft); opacity: 0.2; }
+
+.fig-pulse-dot {
+  fill: var(--accent-signal);
+  filter: drop-shadow(0 0 4px rgba(184, 134, 46, 0.6));
+}
 
 /* Entrada animada de tarjetas de proyecto */
 
