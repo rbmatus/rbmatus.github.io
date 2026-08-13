@@ -142,18 +142,38 @@ a:focus-visible {
 }
 
 .subtitle-links {
-  font-family: var(--mono);
-  font-size: 0.88rem;
-  margin-top: 20px;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
-.bracket {
+.link-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
   color: var(--text-secondary);
+  margin-right: 4px;
+  font-weight: 600;
+}
+
+.header-link {
+  font-weight: 500;
+  color: var(--heading);
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-link:hover {
+  color: var(--accent);
 }
 
 .sep {
-  color: var(--border);
-  margin: 0 6px;
+  color: var(--border-dark);
+  margin: 0 4px;
 }
 
 /* Status Pill */
@@ -227,53 +247,95 @@ a:focus-visible {
   top: 40px;
 }
 
+/* Profile Card Encuadrado */
+
+.profile-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 18px;
+  margin-bottom: 20px;
+}
+
 .profile-photo img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border: 1px solid var(--border);
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
 .info {
-  margin-top: 24px;
-  font-size: 0.9rem;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.info p {
-  margin: 0 0 14px;
+.info-item {
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: 8px;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .info-label {
   display: block;
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.06em;
   color: var(--text-secondary);
-  margin-bottom: 3px;
   font-weight: 600;
+  margin-bottom: 2px;
 }
 
-.skills {
-  margin-top: 32px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
+.info-value {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--heading);
+  font-weight: 500;
+  line-height: 1.4;
 }
 
-.skills h3 {
+.contact-link {
+  color: var(--heading);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-link:hover {
+  color: var(--accent);
+}
+
+/* Skills Card Encuadrado */
+
+.skills-card {
+  background: #FFF;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 18px;
+}
+
+.skills-title {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.06em;
   color: var(--heading);
   margin: 0 0 16px;
   font-weight: 600;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
 }
 
 .skill-group {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .skill-group:last-child {
@@ -283,9 +345,9 @@ a:focus-visible {
 .skill-label {
   display: block;
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   color: var(--text-secondary);
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }
 
 .badge-row {
@@ -496,7 +558,6 @@ a:focus-visible {
   border-top: 4px solid var(--heading);
 }
 
-/* Franja superior de tarjeta */
 .owid-card-meta {
   display: flex;
   align-items: center;
@@ -547,7 +608,7 @@ a:focus-visible {
   font-weight: 600;
 }
 
-/* Frame gráfico/código interactivo tipo OWID Chart Viewer */
+/* Frame gráfico/código interactivo */
 
 .owid-viewer-frame {
   margin: 16px 0;
@@ -639,7 +700,6 @@ a:focus-visible {
 .fig-cell-25 { fill: var(--accent); opacity: 0.2; }
 .fig-pulse-dot { fill: var(--accent-signal); filter: drop-shadow(0 0 4px rgba(215, 53, 53, 0.6)); }
 
-/* Code Panel Integrado */
 .code-panel {
   margin: 0;
   background: var(--code-bg);
@@ -659,8 +719,6 @@ a:focus-visible {
 .tok-kw { color: #38BDF8; }
 .tok-fn { color: #34D399; }
 .tok-num { color: #F472B6; }
-
-/* Enlaces y tags de la tarjeta */
 
 .paper-links {
   margin-top: 14px;
