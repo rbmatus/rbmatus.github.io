@@ -91,15 +91,6 @@ a:focus-visible {
   margin: 0 auto;
   padding: 48px 24px 28px;
   border-bottom: 2px solid var(--heading);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: var(--bg);
-  transition: box-shadow 0.2s ease;
-}
-
-.header.is-scrolled {
-  box-shadow: 0 4px 14px rgba(15, 32, 66, 0.08);
 }
 
 .header-row {
@@ -291,7 +282,7 @@ a:focus-visible {
 
 .left-section {
   position: sticky;
-  top: calc(var(--header-h, 170px) + 24px);
+  top: 24px;
 }
 
 /* Profile Card Encuadrado */
@@ -360,6 +351,50 @@ a:focus-visible {
   color: var(--accent);
 }
 
+.contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.copy-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #FFF;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.copy-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.copy-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.copy-btn .icon {
+  margin: 0;
+  width: 12px;
+  height: 12px;
+}
+
+.copy-btn.is-copied {
+  border-color: #10B981;
+  color: #10B981;
+}
+
 /* Skills Card Encuadrado */
 
 .skills-card {
@@ -379,6 +414,63 @@ a:focus-visible {
   font-weight: 600;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
+}
+
+/* Leyenda de símbolos */
+
+.legend-card {
+  background: #FFF;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 18px;
+  margin-top: 20px;
+}
+
+.legend-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legend-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+}
+
+.legend-mark {
+  flex-shrink: 0;
+  width: 22px;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.legend-mark--bar {
+  width: 3px;
+  height: 14px;
+  border-radius: 2px;
+  background: var(--accent-signal);
+}
+
+.legend-mark--num {
+  color: var(--accent-signal);
+}
+
+.legend-mark--fig {
+  color: var(--accent-signal);
+  font-size: 0.64rem;
+}
+
+.legend-mark--toggle {
+  color: var(--accent);
 }
 
 .skill-selector {
@@ -578,6 +670,31 @@ a:focus-visible {
   border-radius: 2px;
 }
 
+/* Mini caso de estudio (Presentación) */
+
+.preview-case {
+  margin-top: 32px;
+}
+
+.preview-case .owid-card {
+  margin-bottom: 0;
+}
+
+.preview-case-link {
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.preview-case-link .icon {
+  margin: 0;
+}
+
 /* Filtro de proyectos */
 
 .filter-row {
@@ -689,6 +806,32 @@ a:focus-visible {
   font-size: 1.25rem;
   line-height: 1.3;
   display: block;
+}
+
+/* Tarjetas de Educación / Certificaciones */
+
+.edu-card {
+  padding: 18px 24px;
+}
+
+.edu-institution {
+  margin: 6px 0 0;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.cert-view-link {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+}
+
+.edu-card .paper-links {
+  margin-top: 12px;
 }
 
 /* Bloque Key Takeaway (Hallazgo Clave OWID) */
@@ -816,6 +959,59 @@ a:focus-visible {
   margin: 0;
   background: var(--code-bg);
   border-radius: 0;
+}
+
+.code-panel-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.code-panel-lang {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(226, 232, 240, 0.5);
+}
+
+.copy-code-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 4px;
+  background: transparent;
+  color: rgba(226, 232, 240, 0.75);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.copy-code-btn:hover {
+  border-color: rgba(226, 232, 240, 0.4);
+  color: #FFF;
+  background: rgba(255,255,255,0.06);
+}
+
+.copy-code-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.copy-code-btn .icon {
+  margin: 0;
+  width: 12px;
+  height: 12px;
+}
+
+.copy-code-btn.is-copied {
+  border-color: #10B981;
+  color: #10B981;
 }
 
 .code-panel-body {
