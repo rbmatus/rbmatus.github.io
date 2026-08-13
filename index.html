@@ -228,7 +228,6 @@
           <span class="paper-status">análisis exploratorio + modelo predictivo</span>
           <p class="result-line">Resultado clave: identificó el segmento con mayor riesgo de churn (18% del total de clientes).</p>
 
-          <!-- Placeholder — reemplaza este bloque <svg> por <img src="proyecto-churn.png" alt="Captura del dashboard de segmentación de churn"> cuando tengas la captura real -->
           <figure class="project-figure">
             <svg class="project-figure-svg" viewBox="0 0 480 190" role="img" aria-label="Vista previa: barras de riesgo de churn por segmento">
               <line class="fig-axis" x1="26" y1="160" x2="454" y2="160"/>
@@ -280,7 +279,6 @@
           <span class="paper-title">Dashboard de Ventas en Tiempo Real</span>
           <p class="result-line">Resultado clave: redujo el tiempo de reporte semanal en 40%.</p>
 
-          <!-- Placeholder — reemplaza este bloque <svg> por <img src="proyecto-ventas.png" alt="Captura del dashboard de ventas"> cuando tengas la captura real -->
           <figure class="project-figure">
             <svg class="project-figure-svg" viewBox="0 0 480 190" role="img" aria-label="Vista previa: tendencia de ventas en el tiempo">
               <line class="fig-grid" x1="26" y1="40" x2="454" y2="40"/>
@@ -289,6 +287,9 @@
               <line class="fig-axis" x1="26" y1="160" x2="454" y2="160"/>
               <polygon class="fig-area" points="26,140 100,120 174,132 248,80 322,92 396,48 454,64 454,160 26,160"/>
               <polyline class="fig-line" points="26,140 100,120 174,132 248,80 322,92 396,48 454,64" fill="none"/>
+              <circle id="sales-pulse-dot" class="fig-pulse-dot" r="4.5">
+                <animateMotion id="sales-pulse-motion" dur="4.5s" repeatCount="indefinite" calcMode="linear" begin="indefinite" path="M26,140 L100,120 L174,132 L248,80 L322,92 L396,48 L454,64"/>
+              </circle>
             </svg>
             <figcaption class="figure-caption"><span class="fig-num">Fig. 02</span>Ventas semanales consolidadas, vista en tiempo real</figcaption>
           </figure>
@@ -312,7 +313,6 @@
           <span class="paper-title">Explorador de Cohortes de Retención</span>
           <span class="coauthors">Dashboard interactivo construido con Streamlit</span>
 
-          <!-- Placeholder — reemplaza este bloque <svg> por <img src="proyecto-cohortes.png" alt="Captura del explorador de cohortes"> cuando tengas la captura real -->
           <figure class="project-figure">
             <svg class="project-figure-svg" viewBox="0 0 480 150" role="img" aria-label="Vista previa: mapa de calor de cohortes de retención">
               <rect class="fig-cell-100" x="26" y="14" width="60" height="24"/>
@@ -374,7 +374,21 @@
   </footer>
 
   <script>
-    // Toggle de abstracts (resumen / detalle) con soporte ARIA
+    // Variables de animaciones declaradas al inicio para evitar ReferenceError
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const salesMotion = document.getElementById('sales-pulse-motion');
+    let salesMotionStarted = false;
+
+    if (salesMotion && prefersReducedMotion) {
+      salesMotion.remove();
+      const dot = document.getElementById('sales-pulse-dot');
+      if (dot) {
+        dot.setAttribute('cx', '454');
+        dot.setAttribute('cy', '64');
+      }
+    }
+
+    // Toggle de abstracts (resumen / detalle)
     document.querySelectorAll('.abstract-link').forEach(button => {
       button.addEventListener('click', () => {
         const abstractId = button.getAttribute('aria-controls');
@@ -395,12 +409,10 @@
       });
     });
 
-    // Pestañas de categoría con soporte ARIA
     const tabButtons = document.querySelectorAll('.tab-btn');
     const panels = document.querySelectorAll('.tab-panel');
     const proyectosPanel = document.getElementById('panel-proyectos');
 
-    // Animación de entrada escalonada para las tarjetas de proyectos
     function playProjectReveal() {
       if (!proyectosPanel) return;
       const cards = [...proyectosPanel.querySelectorAll('.paper.reveal')].filter(c => !c.hidden);
@@ -408,7 +420,7 @@
         c.classList.remove('is-visible');
         c.style.transitionDelay = (i * 80) + 'ms';
       });
-      void proyectosPanel.offsetHeight; // fuerza reflow para reiniciar la transición
+      void proyectosPanel.offsetHeight; // Reflow para reiniciar transición
       requestAnimationFrame(() => {
         cards.forEach(c => c.classList.add('is-visible'));
       });
@@ -431,6 +443,10 @@
 
       if (tabName === 'proyectos') {
         playProjectReveal();
+        if (salesMotion && !salesMotionStarted && !prefersReducedMotion) {
+          salesMotion.beginElement();
+          salesMotionStarted = true;
+        }
       }
 
       if (updateHash) {
@@ -442,14 +458,14 @@
       btn.addEventListener('click', () => activateTab(btn.dataset.tab));
     });
 
-    // Soporta abrir directo en una pestaña vía URL (#experiencia, #proyectos, #educacion)
+    // Abrir pestaña vía hash de la URL
     const initialTab = window.location.hash.replace('#', '');
     const validTabs = [...tabButtons].map(b => b.dataset.tab);
     if (validTabs.includes(initialTab)) {
       activateTab(initialTab, false);
     }
 
-    // Filtro de proyectos por tecnología
+    // Filtros de tecnologías
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('#panel-proyectos .paper');
     const emptyState = document.querySelector('.filter-empty');
@@ -474,7 +490,7 @@
       });
     });
 
-    // Copiar fragmento SQL al portapapeles
+    // Copiar código SQL
     document.querySelectorAll('.copy-btn').forEach(btn => {
       btn.addEventListener('click', async () => {
         const targetId = btn.getAttribute('data-copy-target');
@@ -497,7 +513,10 @@
       });
     });
 
-    document.getElementById('footer-year').textContent = new Date().getFullYear();
+    const footerYear = document.getElementById('footer-year');
+    if (footerYear) {
+      footerYear.textContent = new Date().getFullYear();
+    }
   </script>
 
 </body>
