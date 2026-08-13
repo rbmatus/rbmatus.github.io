@@ -88,7 +88,7 @@ a:focus-visible {
 /* ---------- Header ---------- */
 
 .header {
-  max-width: 920px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 48px 24px 28px;
   border-bottom: 1px solid var(--border);
@@ -215,12 +215,12 @@ a:focus-visible {
 /* ---------- Layout ---------- */
 
 .main-content {
-  max-width: 920px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 44px 24px 80px;
   display: grid;
-  grid-template-columns: 232px 1fr;
-  gap: 56px;
+  grid-template-columns: 250px 1fr;
+  gap: 64px;
   align-items: start;
 }
 
@@ -462,6 +462,97 @@ a:focus-visible {
   color: var(--text-secondary);
   font-style: italic;
   padding: 20px 0;
+}
+
+/* Figuras de proyecto (placeholders — reemplazar por <img> real) */
+
+.project-figure {
+  margin: 16px 0 6px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-raised);
+  padding: 18px 20px 14px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.paper:hover .project-figure {
+  border-color: var(--accent-soft);
+}
+
+.project-figure-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.paper:hover .project-figure-svg {
+  transform: scale(1.02);
+}
+
+.figure-caption {
+  margin: 10px 2px 0;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.figure-caption .fig-num {
+  color: var(--accent-signal);
+  margin-right: 4px;
+}
+
+.fig-axis {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+.fig-grid {
+  stroke: var(--border);
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+}
+
+.fig-bar {
+  fill: var(--accent-soft);
+  opacity: 0.55;
+}
+
+.fig-bar--highlight {
+  fill: var(--accent-signal);
+  opacity: 0.9;
+}
+
+.fig-line {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.fig-area {
+  fill: var(--accent-soft);
+  opacity: 0.16;
+  stroke: none;
+}
+
+.fig-cell-100 { fill: var(--accent); opacity: 0.85; }
+.fig-cell-75 { fill: var(--accent-soft); opacity: 0.65; }
+.fig-cell-50 { fill: var(--accent-soft); opacity: 0.4; }
+.fig-cell-25 { fill: var(--accent-soft); opacity: 0.2; }
+
+/* Entrada animada de tarjetas de proyecto */
+
+.js-enabled .paper.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.js-enabled .paper.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Papers / cards */
@@ -786,7 +877,7 @@ a:focus-visible {
 /* ---------- Footer ---------- */
 
 .footer {
-  max-width: 920px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 24px 24px 56px;
   font-family: var(--mono);
@@ -839,5 +930,10 @@ a:focus-visible {
   * {
     transition: none !important;
     animation: none !important;
+  }
+
+  .paper.reveal {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
