@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#0F2042" />
   <meta name="author" content="Richard Briones Matus" />
   <meta name="description" content="Richard Briones Matus — Data Analyst. Portafolio de proyectos, dashboards y análisis de datos." />
 
@@ -10,6 +12,7 @@
   <meta property="og:title" content="Richard Briones Matus — Data Analyst" />
   <meta property="og:description" content="Portafolio de proyectos de análisis de datos, dashboards y case studies." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rbmatus.github.io/" />
 
   <title>Richard Briones Matus — Data Analyst</title>
   <script>document.documentElement.classList.add('js-enabled');</script>
@@ -23,6 +26,8 @@
 
 <body>
 
+  <a class="skip-link" href="#panel-presentacion">Saltar al contenido</a>
+
   <header class="header">
     <div class="header-row">
       <div>
@@ -30,22 +35,28 @@
         <h1 class="title">Richard Briones Matus</h1>
         <p class="role">Ingeniería Comercial <span class="role-divider">/</span> <span class="role-italic">Business Intelligence &amp; Data Analytics</span></p>
       </div>
-      <div class="availability" title="Disponible para nuevas oportunidades">
-        <span class="pulse-dot" aria-hidden="true"></span>
-        <span class="availability-text">Open to work</span>
+      <div class="header-actions">
+        <div class="availability" title="Disponible para nuevas oportunidades">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span class="availability-text">Open to work</span>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar tema">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+        </button>
       </div>
     </div>
     <div class="subtitle-links">
       <span class="link-label">Recursos &amp; Perfiles:</span>
-      <a target="_blank" href="./CV_Richard_Briones.pdf" class="header-link">
+      <a target="_blank" rel="noopener" href="./CV_Richard_Briones.pdf" class="header-link">
         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>Descargar CV
       </a>
       <span class="sep">·</span>
-      <a target="_blank" href="https://linkedin.com/in/tu-usuario" class="header-link">
+      <a target="_blank" rel="noopener" href="https://linkedin.com/in/tu-usuario" class="header-link">
         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 15l6-6"/><path d="M10 6l1-1a4 4 0 015.5 5.5l-1 1"/><path d="M14 18l-1 1A4 4 0 017.5 13.5l1-1"/></svg>LinkedIn
       </a>
       <span class="sep">·</span>
-      <a target="_blank" href="https://github.com/tu-usuario" class="header-link">
+      <a target="_blank" rel="noopener" href="https://github.com/rbmatus" class="header-link">
         <svg class="icon icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub
       </a>
     </div>
@@ -53,18 +64,20 @@
 
   <div class="dataset-strip">
     <div class="dataset-strip-inner">
-      <span class="dataset-item"><span class="dataset-key"></span> Versión 2.4 · Última actualización: ago 2026 </span>
+      <span class="dataset-item"><span class="dataset-key">Versión</span> 2.5</span>
+      <span class="dataset-dot">·</span>
+      <span class="dataset-item"><span class="dataset-key">Última actualización</span> sep 2026</span>
     </div>
   </div>
 
   <div class="main-content">
 
     <aside class="left-section">
-      
+
       <!-- Tarjeta encuadrada de Perfil -->
       <div class="profile-card">
         <div class="profile-photo">
-          <img src="./foto.jpg" alt="Richard Briones Matus" />
+          <img src="./foto.jpg" alt="Richard Briones Matus" width="250" height="250" loading="lazy" />
         </div>
 
         <div class="info">
@@ -84,11 +97,11 @@
           <div class="info-item">
             <span class="info-label">Contacto Directo</span>
             <p class="info-value contact-row">
-              <a target="_blank" href="mailto:tu@email.com" class="contact-link">
+              <a href="mailto:rbriones.10@gmail.com" class="contact-link">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-                rbriones.10@gmail.com
+                <span class="contact-mail">rbriones.10@gmail.com</span>
               </a>
-              <button class="copy-btn" type="button" data-copy="tu@email.com" aria-label="Copiar email al portapapeles" title="Copiar email">
+              <button class="copy-btn" type="button" data-copy="rbriones.10@gmail.com" aria-label="Copiar email al portapapeles" title="Copiar email">
                 <svg class="icon copy-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="1.5"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
                 <svg class="icon check-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M20 6L9 17l-5-5"/></svg>
               </button>
@@ -102,37 +115,37 @@
         <h3 class="skills-title">Stack Técnico &amp; Herramientas</h3>
 
         <div class="skill-selector" role="tablist" aria-label="Categorías de stack técnico">
-          <button class="skill-cat-btn active" data-cat="lenguajes" role="tab" aria-selected="true">Lenguajes</button>
-          <button class="skill-cat-btn" data-cat="librerias" role="tab" aria-selected="false">Librerías</button>
-          <button class="skill-cat-btn" data-cat="herramientas" role="tab" aria-selected="false">Herramientas</button>
-          <button class="skill-cat-btn" data-cat="infraestructura" role="tab" aria-selected="false">Cloud</button>
+          <button class="skill-cat-btn active" data-cat="lenguajes" role="tab" aria-selected="true" aria-controls="skillpanel-lenguajes" id="skilltab-lenguajes" type="button">Lenguajes</button>
+          <button class="skill-cat-btn" data-cat="librerias" role="tab" aria-selected="false" aria-controls="skillpanel-librerias" id="skilltab-librerias" tabindex="-1" type="button">Librerías</button>
+          <button class="skill-cat-btn" data-cat="herramientas" role="tab" aria-selected="false" aria-controls="skillpanel-herramientas" id="skilltab-herramientas" tabindex="-1" type="button">Herramientas</button>
+          <button class="skill-cat-btn" data-cat="infraestructura" role="tab" aria-selected="false" aria-controls="skillpanel-infraestructura" id="skilltab-infraestructura" tabindex="-1" type="button">Cloud</button>
         </div>
 
         <div class="skill-panel">
           <div class="skill-panel-meta">
-            <span class="skill-panel-count" id="skill-count">4 ítems</span>
+            <span class="skill-panel-count" id="skill-count" aria-live="polite">4 ítems</span>
           </div>
 
-          <div class="badge-row skill-group-panel" data-cat="lenguajes">
+          <div class="badge-row skill-group-panel" data-cat="lenguajes" id="skillpanel-lenguajes" role="tabpanel" aria-labelledby="skilltab-lenguajes">
             <span class="badge">SQL</span>
             <span class="badge">Python</span>
             <span class="badge">R</span>
             <span class="badge">Excel</span>
           </div>
 
-          <div class="badge-row skill-group-panel" data-cat="librerias" hidden>
+          <div class="badge-row skill-group-panel" data-cat="librerias" id="skillpanel-librerias" role="tabpanel" aria-labelledby="skilltab-librerias" hidden>
             <span class="badge">pandas</span>
             <span class="badge">numpy</span>
             <span class="badge">streamlit</span>
           </div>
 
-          <div class="badge-row skill-group-panel" data-cat="herramientas" hidden>
+          <div class="badge-row skill-group-panel" data-cat="herramientas" id="skillpanel-herramientas" role="tabpanel" aria-labelledby="skilltab-herramientas" hidden>
             <span class="badge">Power BI</span>
             <span class="badge">Git</span>
             <span class="badge">Claude</span>
           </div>
 
-          <div class="badge-row skill-group-panel" data-cat="infraestructura" hidden>
+          <div class="badge-row skill-group-panel" data-cat="infraestructura" id="skillpanel-infraestructura" role="tabpanel" aria-labelledby="skilltab-infraestructura" hidden>
             <span class="badge">BigQuery</span>
             <span class="badge">GCP</span>
             <span class="badge">AWS</span>
@@ -156,27 +169,25 @@
     <main class="right-section">
 
       <nav class="tabs" aria-label="Categorías" role="tablist">
-        <button class="tab-btn active" data-tab="presentacion" role="tab" aria-selected="true" aria-controls="panel-presentacion" id="tab-presentacion">Presentación</button>
-        <span class="sep">|</span>
-        <button class="tab-btn" data-tab="experiencia" role="tab" aria-selected="false" aria-controls="panel-experiencia" id="tab-experiencia">Experiencia</button>
-        <span class="sep">|</span>
-        <button class="tab-btn" data-tab="proyectos" role="tab" aria-selected="false" aria-controls="panel-proyectos" id="tab-proyectos">Proyectos</button>
-        <span class="sep">|</span>
-        <button class="tab-btn" data-tab="educacion" role="tab" aria-selected="false" aria-controls="panel-educacion" id="tab-educacion">Educación</button>
-        <span class="sep">|</span>
-        <button class="tab-btn" data-tab="certificaciones" role="tab" aria-selected="false" aria-controls="panel-certificaciones" id="tab-certificaciones">Certificaciones</button>
+        <button class="tab-btn active" data-tab="presentacion" role="tab" aria-selected="true" aria-controls="panel-presentacion" id="tab-presentacion" type="button">Presentación</button>
+        <span class="sep" aria-hidden="true">|</span>
+        <button class="tab-btn" data-tab="experiencia" role="tab" aria-selected="false" aria-controls="panel-experiencia" id="tab-experiencia" tabindex="-1" type="button">Experiencia</button>
+        <span class="sep" aria-hidden="true">|</span>
+        <button class="tab-btn" data-tab="proyectos" role="tab" aria-selected="false" aria-controls="panel-proyectos" id="tab-proyectos" tabindex="-1" type="button">Proyectos</button>
+        <span class="sep" aria-hidden="true">|</span>
+        <button class="tab-btn" data-tab="educacion" role="tab" aria-selected="false" aria-controls="panel-educacion" id="tab-educacion" tabindex="-1" type="button">Educación</button>
+        <span class="sep" aria-hidden="true">|</span>
+        <button class="tab-btn" data-tab="certificaciones" role="tab" aria-selected="false" aria-controls="panel-certificaciones" id="tab-certificaciones" tabindex="-1" type="button">Certificaciones</button>
       </nav>
 
       <!-- ===== PRESENTACIÓN ===== -->
-      <section class="tab-panel" data-panel="presentacion" id="panel-presentacion" role="tabpanel" aria-labelledby="tab-presentacion">
+      <section class="tab-panel" data-panel="presentacion" id="panel-presentacion" role="tabpanel" aria-labelledby="tab-presentacion" tabindex="-1">
         <h2><span class="section-mark">§01</span> Presentación</h2>
         <p class="intro-text">
-         Profesional en finanzas con experiencia en control de
-          gestión y planificación financiera. Orientado a la
-          automatización y digitalización de procesos mediante
-          herramientas tecnológicas para la mejora continua del
-          negocio. Destaco por la resolución de problemas técnicos
-          reales y comunicar hallazgos con claridad.
+          Profesional en finanzas con experiencia en control de gestión y planificación financiera.
+          Orientado a la automatización y digitalización de procesos mediante herramientas tecnológicas
+          para la mejora continua del negocio. Destaco por la resolución de problemas técnicos reales y
+          por comunicar hallazgos con claridad.
         </p>
         <p class="intro-text">
           Me interesan especialmente los problemas de <em>data analysis</em>, finanzas y eficiencia operativa —
@@ -244,7 +255,7 @@
       </section>
 
       <!-- ===== EXPERIENCIA ===== -->
-      <section class="tab-panel" data-panel="experiencia" id="panel-experiencia" role="tabpanel" aria-labelledby="tab-experiencia" hidden>
+      <section class="tab-panel" data-panel="experiencia" id="panel-experiencia" role="tabpanel" aria-labelledby="tab-experiencia" tabindex="-1" hidden>
         <h2><span class="section-mark">§02</span> Experiencia</h2>
 
         <article class="paper owid-card">
@@ -252,19 +263,17 @@
             <span class="owid-topic-badge">Retail</span>
             <span class="owid-data-status">Sept 2025 — Feb 2026</span>
           </div>
-          <span class="paper-title">Analista de Planificación y Control Financiero (Reemplazo) - Valle Dorado</span>
+          <span class="paper-title">Analista de Planificación y Control Financiero (Reemplazo) — Valle Dorado</span>
           <div class="owid-takeaway">
-            <strong>Logro clave:</strong> Redujo el ciclo de reporting semanal de 6h a 2h automatizando la ingesta de datos.
+            <strong>Logro clave:</strong> Redujo el ciclo de reporting semanal de 6 h a 2 h automatizando la ingesta de datos.
           </div>
           <div class="paper-links">
-            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_exp1">[ ver metodología y responsabilidades <span class="chevron">▾</span> ]</button>
+            <button class="abstract-link" type="button" aria-expanded="false" aria-controls="abstract_exp_valledorado">[ ver metodología y responsabilidades <span class="chevron" aria-hidden="true">▾</span> ]</button>
           </div>
-          <p class="abstract" id="abstract_exp1">
-            Distribuidor Mobil Copec. Apoyo en los procesos de
-            planificación financiera, trazabilidad de procesos
-            operacionales, elaboración de forecasting de demanda,
-            monitoreo de KPI e integración y consolidación de
-            información desde múltiples fuentes de datos.
+          <p class="abstract" id="abstract_exp_valledorado">
+            Distribuidor Mobil Copec. Apoyo en los procesos de planificación financiera, trazabilidad de
+            procesos operacionales, elaboración de forecasting de demanda, monitoreo de KPI e integración
+            y consolidación de información desde múltiples fuentes de datos.
           </p>
           <div class="tags"><span class="code-badge">sql</span><span class="code-badge">python</span><span class="code-badge">power bi</span></div>
         </article>
@@ -274,23 +283,25 @@
             <span class="owid-topic-badge">Tecnologías de la información</span>
             <span class="owid-data-status">Dic 2023 — May 2025</span>
           </div>
-          <span class="paper-title">Analista de Datos & Cofundador Novokey</span>
+          <span class="paper-title">Analista de Datos &amp; Cofundador — Novokey</span>
           <div class="owid-takeaway">
-            <strong>Logro clave:</strong> Desarrollamos una plataforma de seguridad vehicular con
-            tecnología IoT (B2B y B2C).
+            <strong>Logro clave:</strong> Desarrollamos una plataforma de seguridad vehicular con tecnología IoT (B2B y B2C).
           </div>
           <div class="paper-links">
-            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_exp1">[ ver metodología y responsabilidades <span class="chevron">▾</span> ]</button>
+            <button class="abstract-link" type="button" aria-expanded="false" aria-controls="abstract_exp_novokey">[ ver metodología y responsabilidades <span class="chevron" aria-hidden="true">▾</span> ]</button>
           </div>
-          <p class="abstract" id="abstract_exp1">
-            Diseño e implementación de
-            soluciones de Business Intelligence (BI) mediante
-            procesos ETL, automatización de reportes y análisis de
-            datos operacionales para optimizar la eficiencia de los
-            procesos e identificar oportunidades de control de costos.
+          <p class="abstract" id="abstract_exp_novokey">
+            Diseño e implementación de soluciones de Business Intelligence (BI) mediante procesos ETL,
+            automatización de reportes y análisis de datos operacionales para optimizar la eficiencia de
+            los procesos e identificar oportunidades de control de costos.
           </p>
           <div class="tags"><span class="code-badge">sql</span><span class="code-badge">python</span><span class="code-badge">power bi</span></div>
         </article>
+
+        <!--
+          NOTA: las dos tarjetas siguientes venían del template ("Empresa" / "Empresa Anterior")
+          y sus fechas se solapaban con las reales. Están comentadas para que la sección
+          muestre solo experiencia verificable. Reemplaza los datos y descoméntalas si aplican.
 
         <article class="paper owid-card">
           <div class="owid-card-meta">
@@ -299,16 +310,12 @@
           </div>
           <span class="paper-title">Data Analyst — Empresa</span>
           <div class="owid-takeaway">
-            <strong>Logro clave:</strong> Redujo el ciclo de reporting semanal de 6h a 2h automatizando la ingesta de datos.
+            <strong>Logro clave:</strong> Descripción del logro.
           </div>
           <div class="paper-links">
-            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_exp1">[ ver metodología y responsabilidades <span class="chevron">▾</span> ]</button>
+            <button class="abstract-link" type="button" aria-expanded="false" aria-controls="abstract_exp_3">[ ver detalle <span class="chevron" aria-hidden="true">▾</span> ]</button>
           </div>
-          <p class="abstract" id="abstract_exp1">
-            Responsable del reporting comercial y financiero para tres áreas de negocio. Diseñé e implementé
-            pipelines de ETL en SQL y Python que consolidan fuentes dispersas en un modelo único, y construí
-            dashboards en Power BI usados semanalmente por el equipo directivo.
-          </p>
+          <p class="abstract" id="abstract_exp_3">Descripción del rol.</p>
           <div class="tags"><span class="code-badge">sql</span><span class="code-badge">python</span><span class="code-badge">power bi</span></div>
         </article>
 
@@ -319,33 +326,30 @@
           </div>
           <span class="paper-title">Analista Junior — Empresa Anterior</span>
           <div class="owid-takeaway">
-            <strong>Logro clave:</strong> Construyó el primer modelo de scoring de riesgo de churn del equipo.
+            <strong>Logro clave:</strong> Descripción del logro.
           </div>
           <div class="paper-links">
-            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_exp2">[ ver detalle <span class="chevron">▾</span> ]</button>
+            <button class="abstract-link" type="button" aria-expanded="false" aria-controls="abstract_exp_4">[ ver detalle <span class="chevron" aria-hidden="true">▾</span> ]</button>
           </div>
-          <p class="abstract" id="abstract_exp2">
-            Apoyé al equipo de negocio con análisis ad-hoc y reporting recurrente. Desarrollé un modelo
-            de clasificación para identificar clientes con alta probabilidad de churn, que pasó a integrarse
-            en el proceso mensual de retención.
-          </p>
+          <p class="abstract" id="abstract_exp_4">Descripción del rol.</p>
           <div class="tags"><span class="code-badge">python</span><span class="code-badge">scikit-learn</span><span class="code-badge">excel</span></div>
         </article>
+        -->
       </section>
 
       <!-- ===== PROYECTOS ===== -->
-      <section class="tab-panel" data-panel="proyectos" id="panel-proyectos" role="tabpanel" aria-labelledby="tab-proyectos" hidden>
+      <section class="tab-panel" data-panel="proyectos" id="panel-proyectos" role="tabpanel" aria-labelledby="tab-proyectos" tabindex="-1" hidden>
         <h2><span class="section-mark">§03</span> Proyectos de Investigación y Datos</h2>
 
         <div class="filter-row" role="group" aria-label="Filtrar proyectos por tecnología">
           <span class="filter-label">Filtrar por</span>
-          <button class="filter-btn active" data-filter="todos">Todos</button>
-          <button class="filter-btn" data-filter="python">Python</button>
-          <button class="filter-btn" data-filter="sql">SQL</button>
-          <button class="filter-btn" data-filter="pandas">Pandas</button>
-          <button class="filter-btn" data-filter="streamlit">Streamlit</button>
-          <button class="filter-btn" data-filter="xgboost">XGBoost</button>
-          <button class="filter-btn" data-filter="bigquery">BigQuery</button>
+          <button class="filter-btn active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+          <button class="filter-btn" type="button" data-filter="python" aria-pressed="false">Python</button>
+          <button class="filter-btn" type="button" data-filter="sql" aria-pressed="false">SQL</button>
+          <button class="filter-btn" type="button" data-filter="pandas" aria-pressed="false">Pandas</button>
+          <button class="filter-btn" type="button" data-filter="streamlit" aria-pressed="false">Streamlit</button>
+          <button class="filter-btn" type="button" data-filter="xgboost" aria-pressed="false">XGBoost</button>
+          <button class="filter-btn" type="button" data-filter="bigquery" aria-pressed="false">BigQuery</button>
         </div>
 
         <!-- PROYECTO 1 -->
@@ -365,16 +369,16 @@
           <div class="owid-viewer-frame">
             <div class="owid-viewer-toolbar">
               <span class="owid-viewer-title">Fig 01. Distribución de Riesgo de Churn</span>
-              <div class="owid-toggle-group">
-                <button class="owid-toggle-btn active" data-view="chart">Gráfico</button>
-                <button class="owid-toggle-btn" data-view="code">Consulta SQL</button>
+              <div class="owid-toggle-group" role="group" aria-label="Alternar vista">
+                <button class="owid-toggle-btn active" type="button" data-view="chart" aria-pressed="true">Gráfico</button>
+                <button class="owid-toggle-btn" type="button" data-view="code" aria-pressed="false">Consulta SQL</button>
               </div>
             </div>
 
             <!-- Vista Gráfico -->
             <div class="owid-view-content view-chart">
               <figure class="project-figure">
-                <svg class="project-figure-svg" viewBox="0 0 480 160" role="img" aria-label="Vista previa: barras de riesgo de churn por segmento">
+                <svg class="project-figure-svg" viewBox="0 0 480 160" role="img" aria-label="Barras de riesgo de churn por segmento, con el segmento E en el máximo riesgo">
                   <line class="fig-grid" x1="26" y1="20" x2="454" y2="20"/>
                   <line class="fig-grid" x1="26" y1="80" x2="454" y2="80"/>
                   <text class="fig-tick" x="20" y="143" text-anchor="end">0</text>
@@ -422,10 +426,10 @@ ORDER BY churn_score DESC;">
           </div>
 
           <div class="paper-links">
-            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_case1">[ Metodología y Fuentes ▾ ]</button>
+            <button class="abstract-link" type="button" aria-expanded="false" aria-controls="abstract_case1">[ Metodología y Fuentes <span class="chevron" aria-hidden="true">▾</span> ]</button>
             <span class="paper-links-extra">
-              <a href="#" target="_blank"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>notebook</a>
-              <a href="#" target="_blank"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>reporte pdf</a>
+              <a href="#" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>notebook</a>
+              <a href="#" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>reporte pdf</a>
             </span>
           </div>
           <div class="abstract" id="abstract_case1">
@@ -448,8 +452,8 @@ ORDER BY churn_score DESC;">
             <strong>Key Takeaway:</strong> Automatizó la ingesta desde 4 sistemas distribuidos, eliminando 4 horas semanales de consolidación manual en Excel.
           </div>
 
-          <figure class="project-figure" style="border: 1px solid var(--border); border-radius: 6px;">
-            <svg class="project-figure-svg" viewBox="0 0 480 150" role="img" aria-label="Vista previa: tendencia de ventas">
+          <figure class="project-figure project-figure--framed">
+            <svg class="project-figure-svg" viewBox="0 0 480 150" role="img" aria-label="Tendencia de ventas semanales, con máximo en la semana 6">
               <line class="fig-grid" x1="26" y1="30" x2="454" y2="30"/>
               <line class="fig-grid" x1="26" y1="75" x2="454" y2="75"/>
               <line class="fig-grid" x1="26" y1="120" x2="454" y2="120"/>
@@ -472,10 +476,10 @@ ORDER BY churn_score DESC;">
           </figure>
 
           <div class="paper-links">
-            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_proj1">[ Descripción del Pipeline ▾ ]</button>
+            <button class="abstract-link" type="button" aria-expanded="false" aria-controls="abstract_proj1">[ Descripción del Pipeline <span class="chevron" aria-hidden="true">▾</span> ]</button>
             <span class="paper-links-extra">
-              <a href="#" target="_blank"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>live demo</a>
-              <a href="#" target="_blank"><svg class="icon icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>github</a>
+              <a href="#" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>live demo</a>
+              <a href="#" target="_blank" rel="noopener"><svg class="icon icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>github</a>
             </span>
           </div>
           <div class="abstract" id="abstract_proj1">
@@ -497,8 +501,8 @@ ORDER BY churn_score DESC;">
             <strong>Key Takeaway:</strong> Permite a los equipos de Producto y Growth evaluar la retención acumulada a 30, 60 y 90 días sin requerir consultas SQL manuales.
           </div>
 
-          <figure class="project-figure" style="border: 1px solid var(--border); border-radius: 6px;">
-            <svg class="project-figure-svg" viewBox="0 0 480 130" role="img" aria-label="Mapa de calor">
+          <figure class="project-figure project-figure--framed">
+            <svg class="project-figure-svg" viewBox="0 0 480 130" role="img" aria-label="Mapa de calor de retención por cohorte mensual">
               <text class="fig-tick" x="56" y="10" text-anchor="middle">D0</text>
               <text class="fig-tick" x="124" y="10" text-anchor="middle">D30</text>
               <text class="fig-tick" x="192" y="10" text-anchor="middle">D60</text>
@@ -518,9 +522,9 @@ ORDER BY churn_score DESC;">
           </figure>
 
           <div class="paper-links">
-            <button class="abstract-link" aria-expanded="false" aria-controls="abstract_tool1">[ Ver Arquitectura ▾ ]</button>
+            <button class="abstract-link" type="button" aria-expanded="false" aria-controls="abstract_tool1">[ Ver Arquitectura <span class="chevron" aria-hidden="true">▾</span> ]</button>
             <span class="paper-links-extra">
-              <a href="https://tuapp.streamlit.app" target="_blank"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10"/><path d="M12 20V4"/><path d="M20 20v-7"/></svg>abrir app</a>
+              <a href="https://tuapp.streamlit.app" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10"/><path d="M12 20V4"/><path d="M20 20v-7"/></svg>abrir app</a>
             </span>
           </div>
           <div class="abstract" id="abstract_tool1">
@@ -533,7 +537,7 @@ ORDER BY churn_score DESC;">
       </section>
 
       <!-- ===== EDUCACIÓN ===== -->
-      <section class="tab-panel" data-panel="educacion" id="panel-educacion" role="tabpanel" aria-labelledby="tab-educacion" hidden>
+      <section class="tab-panel" data-panel="educacion" id="panel-educacion" role="tabpanel" aria-labelledby="tab-educacion" tabindex="-1" hidden>
         <h2><span class="section-mark">§04</span> Educación</h2>
 
         <article class="paper owid-card edu-card">
@@ -565,36 +569,73 @@ ORDER BY churn_score DESC;">
       </section>
 
       <!-- ===== CERTIFICACIONES ===== -->
-      <section class="tab-panel" data-panel="certificaciones" id="panel-certificaciones" role="tabpanel" aria-labelledby="tab-certificaciones" hidden>
+      <section class="tab-panel" data-panel="certificaciones" id="panel-certificaciones" role="tabpanel" aria-labelledby="tab-certificaciones" tabindex="-1" hidden>
         <h2><span class="section-mark">§05</span> Certificaciones &amp; Cursos</h2>
 
-        <article class="paper owid-card edu-card">
+        <p class="section-intro">
+          Cada certificado abre el PDF original emitido por la institución. Los códigos de validación
+          permiten comprobar su autenticidad en el sitio de la entidad emisora.
+        </p>
+
+        <article class="paper owid-card cert-card">
           <div class="owid-card-meta">
             <span class="owid-topic-badge">Certificación</span>
-            <span class="owid-data-status">Año</span>
+            <span class="owid-data-status">Jul 2026</span>
           </div>
-          <span class="paper-title">Nombre de la Certificación</span>
-          <p class="edu-institution">Institución emisora <span class="dot-sep">·</span> Modalidad</p>
+          <span class="paper-title">Python para el Manejo de Datos: Nivel Intermedio</span>
+          <p class="edu-institution">
+            Pontificia Universidad Católica de Chile
+            <span class="dot-sep">·</span> Educación Continua (TELEDUC)
+          </p>
+
+          <ul class="cert-facts">
+            <li><span class="cert-fact-label">Duración</span><span class="cert-fact-value">30 horas</span></li>
+            <li><span class="cert-fact-label">Nota final</span><span class="cert-fact-value">7,0 / 7,0</span></li>
+            <li><span class="cert-fact-label">Período</span><span class="cert-fact-value">2 — 30 jul 2026</span></li>
+          </ul>
+
           <div class="paper-links">
-            <a class="cert-view-link" href="./certificados/certificacion-01.jpg" target="_blank" rel="noopener">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="9.5" r="1.8"/><path d="M21 15l-5-5-9 9"/></svg>
-              Ver certificado
+            <a class="cert-view-link" href="./Certificado_Python_Intermedio.pdf" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>
+              Ver certificado (PDF)
             </a>
+            <span class="paper-links-extra">
+              <a class="cert-verify-link" href="https://www.uc.cl/ECvalidacertificado" target="_blank" rel="noopener">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                Verificar · código A233BA0B7C
+              </a>
+            </span>
           </div>
         </article>
 
-        <article class="paper owid-card edu-card">
+        <article class="paper owid-card cert-card">
           <div class="owid-card-meta">
-            <span class="owid-topic-badge">Curso</span>
-            <span class="owid-data-status">Año</span>
+            <span class="owid-topic-badge">Certificación</span>
+            <span class="owid-data-status">Jul 2026</span>
           </div>
-          <span class="paper-title">Nombre del Curso</span>
-          <p class="edu-institution">Institución emisora <span class="dot-sep">·</span> Modalidad</p>
+          <span class="paper-title">Herramientas para la Automatización de Procesos de Bases de Datos Relacionales con SQL</span>
+          <p class="edu-institution">
+            Pontificia Universidad Católica de Chile
+            <span class="dot-sep">·</span> Educación Continua (TELEDUC)
+          </p>
+
+          <ul class="cert-facts">
+            <li><span class="cert-fact-label">Duración</span><span class="cert-fact-value">30 horas</span></li>
+            <li><span class="cert-fact-label">Nota final</span><span class="cert-fact-value">7,0 / 7,0</span></li>
+            <li><span class="cert-fact-label">Período</span><span class="cert-fact-value">2 — 30 jul 2026</span></li>
+          </ul>
+
           <div class="paper-links">
-            <a class="cert-view-link" href="./certificados/certificacion-02.jpg" target="_blank" rel="noopener">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="9.5" r="1.8"/><path d="M21 15l-5-5-9 9"/></svg>
-              Ver certificado
+            <a class="cert-view-link" href="./Certificado_SQL_Intermedio.pdf" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg>
+              Ver certificado (PDF)
             </a>
+            <span class="paper-links-extra">
+              <a class="cert-verify-link" href="https://www.uc.cl/ECvalidacertificado" target="_blank" rel="noopener">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                Verificar · código A233BA0B7B
+              </a>
+            </span>
           </div>
         </article>
       </section>
@@ -607,8 +648,26 @@ ORDER BY churn_score DESC;">
   </footer>
 
   <script>
-    // Botones de copiar (email, SQL, etc.)
-    function wireCopyButton(btn, extraLabel) {
+    // ---------- Tema claro / oscuro ----------
+    (function () {
+      const root = document.documentElement;
+      const stored = localStorage.getItem('theme');
+      if (stored === 'light' || stored === 'dark') {
+        root.setAttribute('data-theme', stored);
+      }
+      const toggle = document.getElementById('theme-toggle');
+      if (!toggle) return;
+      toggle.addEventListener('click', () => {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const current = root.getAttribute('data-theme') || (prefersDark ? 'dark' : 'light');
+        const next = current === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+    })();
+
+    // ---------- Botones de copiar (email, SQL, etc.) ----------
+    function wireCopyButton(btn) {
       btn.addEventListener('click', async () => {
         const text = btn.dataset.copy;
         try {
@@ -642,11 +701,28 @@ ORDER BY churn_score DESC;">
       });
     }
 
-    document.querySelectorAll('.copy-btn, .copy-code-btn').forEach(btn => wireCopyButton(btn));
+    document.querySelectorAll('.copy-btn, .copy-code-btn').forEach(wireCopyButton);
 
-    // Selector de categorías de Stack Técnico
-    const skillCatButtons = document.querySelectorAll('.skill-cat-btn');
-    const skillPanels = document.querySelectorAll('.skill-group-panel');
+    // ---------- Navegación con flechas para listas de tabs ----------
+    function wireArrowKeys(buttons) {
+      buttons.forEach((btn, i) => {
+        btn.addEventListener('keydown', (e) => {
+          let next = null;
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = buttons[(i + 1) % buttons.length];
+          else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = buttons[(i - 1 + buttons.length) % buttons.length];
+          else if (e.key === 'Home') next = buttons[0];
+          else if (e.key === 'End') next = buttons[buttons.length - 1];
+          if (!next) return;
+          e.preventDefault();
+          next.focus();
+          next.click();
+        });
+      });
+    }
+
+    // ---------- Selector de categorías de Stack Técnico ----------
+    const skillCatButtons = [...document.querySelectorAll('.skill-cat-btn')];
+    const skillPanels = [...document.querySelectorAll('.skill-group-panel')];
     const skillCount = document.getElementById('skill-count');
 
     skillCatButtons.forEach(btn => {
@@ -654,28 +730,29 @@ ORDER BY churn_score DESC;">
         skillCatButtons.forEach(b => {
           b.classList.remove('active');
           b.setAttribute('aria-selected', 'false');
+          b.tabIndex = -1;
         });
         btn.classList.add('active');
         btn.setAttribute('aria-selected', 'true');
+        btn.tabIndex = 0;
 
         const cat = btn.dataset.cat;
-        skillPanels.forEach(p => {
-          p.hidden = p.dataset.cat !== cat;
-        });
+        skillPanels.forEach(p => { p.hidden = p.dataset.cat !== cat; });
 
-        const activePanel = [...skillPanels].find(p => p.dataset.cat === cat);
+        const activePanel = skillPanels.find(p => p.dataset.cat === cat);
         if (activePanel && skillCount) {
           const n = activePanel.querySelectorAll('.badge').length;
           skillCount.textContent = n + (n === 1 ? ' ítem' : ' ítems');
         }
       });
     });
+    wireArrowKeys(skillCatButtons);
 
-    // Toggle de abstracts
+    // ---------- Toggle de abstracts ----------
     document.querySelectorAll('.abstract-link').forEach(button => {
       button.addEventListener('click', () => {
-        const abstractId = button.getAttribute('aria-controls');
-        const abstract = document.getElementById(abstractId);
+        const abstract = document.getElementById(button.getAttribute('aria-controls'));
+        if (!abstract) return;
         const isOpen = abstract.classList.contains('is-open');
 
         document.querySelectorAll('.abstract').forEach(p => p.classList.remove('is-open'));
@@ -692,7 +769,7 @@ ORDER BY churn_score DESC;">
       });
     });
 
-    // Toggle de pestañas OWID (Gráfico vs SQL)
+    // ---------- Toggle Gráfico / SQL ----------
     document.querySelectorAll('.owid-viewer-frame').forEach(frame => {
       const btns = frame.querySelectorAll('.owid-toggle-btn');
       const chartView = frame.querySelector('.view-chart');
@@ -700,23 +777,23 @@ ORDER BY churn_score DESC;">
 
       btns.forEach(btn => {
         btn.addEventListener('click', () => {
-          btns.forEach(b => b.classList.remove('active'));
+          btns.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-pressed', 'false');
+          });
           btn.classList.add('active');
+          btn.setAttribute('aria-pressed', 'true');
 
-          if (btn.dataset.view === 'chart') {
-            chartView.hidden = false;
-            codeView.hidden = true;
-          } else {
-            chartView.hidden = true;
-            codeView.hidden = false;
-          }
+          const showChart = btn.dataset.view === 'chart';
+          chartView.hidden = !showChart;
+          codeView.hidden = showChart;
         });
       });
     });
 
-    // Pestañas principales
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const panels = document.querySelectorAll('.tab-panel');
+    // ---------- Pestañas principales ----------
+    const tabButtons = [...document.querySelectorAll('.tab-btn')];
+    const panels = [...document.querySelectorAll('.tab-panel')];
     const proyectosPanel = document.getElementById('panel-proyectos');
 
     function playProjectReveal() {
@@ -727,68 +804,60 @@ ORDER BY churn_score DESC;">
         c.style.transitionDelay = (i * 80) + 'ms';
       });
       void proyectosPanel.offsetHeight;
-      requestAnimationFrame(() => {
-        cards.forEach(c => c.classList.add('is-visible'));
-      });
+      requestAnimationFrame(() => cards.forEach(c => c.classList.add('is-visible')));
     }
 
     function activateTab(tabName, updateHash = true) {
-      const target = [...tabButtons].find(b => b.dataset.tab === tabName);
+      const target = tabButtons.find(b => b.dataset.tab === tabName);
       if (!target) return;
 
       tabButtons.forEach(b => {
         b.classList.remove('active');
         b.setAttribute('aria-selected', 'false');
+        b.tabIndex = -1;
       });
       target.classList.add('active');
       target.setAttribute('aria-selected', 'true');
+      target.tabIndex = 0;
 
-      panels.forEach(p => {
-        p.hidden = p.dataset.panel !== tabName;
-      });
+      panels.forEach(p => { p.hidden = p.dataset.panel !== tabName; });
 
-      if (tabName === 'proyectos') {
-        playProjectReveal();
-      }
-
-      if (updateHash) {
-        history.replaceState(null, '', '#' + tabName);
-      }
+      if (tabName === 'proyectos') playProjectReveal();
+      if (updateHash) history.replaceState(null, '', '#' + tabName);
     }
 
-    tabButtons.forEach(btn => {
-      btn.addEventListener('click', () => activateTab(btn.dataset.tab));
-    });
+    tabButtons.forEach(btn => btn.addEventListener('click', () => activateTab(btn.dataset.tab)));
+    wireArrowKeys(tabButtons);
 
     const initialTab = window.location.hash.replace('#', '');
-    const validTabs = [...tabButtons].map(b => b.dataset.tab);
-    if (validTabs.includes(initialTab)) {
-      activateTab(initialTab, false);
-    }
+    const validTabs = tabButtons.map(b => b.dataset.tab);
+    if (validTabs.includes(initialTab)) activateTab(initialTab, false);
 
-    // Links "Ver caso completo" que saltan a otra tab y hacen scroll al elemento
+    // ---------- Saltos entre pestañas ----------
     document.querySelectorAll('[data-jump]').forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         activateTab('proyectos');
         const targetEl = document.getElementById(link.dataset.jump);
         if (targetEl) {
-          requestAnimationFrame(() => {
-            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          });
+          requestAnimationFrame(() => targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' }));
         }
       });
     });
 
-    // Filtros de tecnologías
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('#panel-proyectos .paper');
+    // ---------- Filtros de tecnologías ----------
+    const filterButtons = [...document.querySelectorAll('.filter-btn')];
+    const projectCards = [...document.querySelectorAll('#panel-proyectos .paper')];
     const emptyState = document.querySelector('.filter-empty');
 
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('active'));
+        filterButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
 
         const filter = btn.dataset.filter;
         let visibleCount = 0;
