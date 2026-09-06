@@ -1,280 +1,307 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="author" content="Richard Briones Matus" />
-  <meta name="description" content="Richard Briones Matus — analista de datos con base en control de gestión y planificación financiera. Proyectos, dashboards y case studies." />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light dark" />
+<meta name="author" content="Richard Briones Matus" />
+<meta name="description" content="Portafolio de Richard Briones Matus: control de gestión, planificación financiera y análisis de datos con SQL, Python y Power BI." />
 
-  <meta property="og:title" content="Richard Briones Matus — Analista de datos" />
-  <meta property="og:description" content="Control de gestión y planificación financiera, con SQL, Python y Power BI." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://rbmatus.github.io/" />
+<meta property="og:title" content="Richard Briones Matus — Analista de datos" />
+<meta property="og:description" content="Control de gestión y planificación financiera, con SQL, Python y Power BI." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rbmatus.github.io/" />
 
-  <title>Richard Briones Matus — Analista de datos</title>
-  <script>document.documentElement.classList.add('js-enabled');</script>
+<title>Richard Briones Matus — Analista de datos</title>
 
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css?v=4">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="top">
 
-<a class="skip-link" href="#presentacion">Saltar al contenido</a>
+<a class="skip" href="#perfil">Saltar al contenido</a>
 
-<header class="masthead">
-  <div class="wrap masthead-inner">
-    <div>
-      <h1 class="name">Richard Briones Matus</h1>
-      <p class="role">Analista de datos · control de gestión y planificación financiera</p>
-      <p class="meta-line">Santiago, Chile <span class="op">·</span> disponible para nuevas oportunidades</p>
-    </div>
-    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar tema">
-      <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-      <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="monogram" href="#top">R·B·M</a>
+    <nav class="topnav" aria-label="Secciones">
+      <a href="#perfil">Perfil</a>
+      <a href="#stack">Stack</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#registro">Proyectos</a>
+      <a href="#credenciales">Credenciales</a>
+      <a href="./CV_Richard_Briones.pdf" target="_blank" rel="noopener">CV</a>
+      <a href="https://github.com/rbmatus" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+    <button class="themebtn" id="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+      <span class="themebtn-sun">☀</span><span class="themebtn-moon">☾</span>
     </button>
   </div>
 </header>
 
-<nav class="sectionnav" aria-label="Secciones">
-  <div class="wrap sectionnav-inner">
-    <ol class="navlist">
-      <li><a href="#presentacion"><span class="navnum">01</span> Presentación</a></li>
-      <li><a href="#experiencia"><span class="navnum">02</span> Experiencia</a></li>
-      <li><a href="#proyectos"><span class="navnum">03</span> Proyectos</a></li>
-      <li><a href="#educacion"><span class="navnum">04</span> Educación</a></li>
-      <li><a href="#certificaciones"><span class="navnum">05</span> Certificaciones</a></li>
-    </ol>
-    <a class="navcv" href="./CV_Richard_Briones.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">// Portafolio de análisis de datos</p>
+    <h1 class="hero-name">Richard Briones Matus</h1>
+    <p class="hero-role">Analista de datos · Control de gestión &amp; planificación financiera · SQL · Python · Power BI</p>
+    <p class="hero-text">
+      Vengo de finanzas y trabajo en la frontera con los datos: consolidar fuentes dispersas, construir
+      el modelo, y dejar el resultado en un tablero que el negocio use sin pedir ayuda.
+    </p>
+    <p class="hero-links">
+      <a href="#registro">Ver proyectos</a>
+      <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="mailto:rbriones.10@gmail.com">Contacto</a>
+    </p>
   </div>
-</nav>
+</section>
 
-<div class="wrap layout">
+<main>
 
-  <aside class="sidebar">
-    <img class="portrait" src="./foto.jpg" alt="Richard Briones Matus" width="260" height="260" loading="lazy" />
+<!-- ══ PERFIL ══ -->
+<section id="perfil" class="section">
+  <div class="wrap">
+    <p class="eyebrow">// Perfil</p>
+    <h2 class="section-h">Antecedentes</h2>
 
-    <dl class="deflist">
-      <dt>Ubicación</dt>
-      <dd>Santiago, Chile</dd>
-      <dt>Correo</dt>
-      <dd class="mailrow">
-        <a href="mailto:rbriones.10@gmail.com">rbriones.10@gmail.com</a>
-        <button class="copy-btn" type="button" data-copy="rbriones.10@gmail.com" aria-label="Copiar correo" title="Copiar correo">
-          <svg class="icon copy-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
-          <svg class="icon check-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M20 6L9 17l-5-5"/></svg>
-        </button>
-      </dd>
-      <dt>Perfiles</dt>
-      <dd>
-        <a href="https://github.com/rbmatus" target="_blank" rel="noopener">GitHub</a><span class="op">·</span><a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener">LinkedIn</a>
-      </dd>
-    </dl>
-
-    <h2 class="side-h">Stack técnico</h2>
-    <table class="booktabs stack-table">
-      <caption class="visually-hidden">Herramientas agrupadas por categoría</caption>
-      <thead>
-        <tr><th scope="col">Categoría</th><th scope="col">Herramientas</th></tr>
-      </thead>
-      <tbody>
-        <tr><th scope="row">Lenguajes</th><td class="mono">SQL, Python, R</td></tr>
-        <tr><th scope="row">Librerías</th><td class="mono">pandas, numpy, streamlit</td></tr>
-        <tr><th scope="row">Análisis</th><td class="mono">Power BI, Excel</td></tr>
-        <tr><th scope="row">Cloud</th><td class="mono">BigQuery, GCP</td></tr>
-        <tr><th scope="row">Otros</th><td class="mono">Git, Claude</td></tr>
-      </tbody>
-    </table>
-  </aside>
-
-  <main class="content">
-
-    <section id="presentacion">
-      <h2 class="sec-h"><span class="sec-num">01</span> Presentación</h2>
-
-      <p class="lede">
-        Profesional en finanzas con experiencia en control de gestión y planificación financiera.
-        Trabajo en la automatización de procesos de reporting: consolidar fuentes dispersas, construir
-        el modelo de datos y dejar el resultado en un tablero que el negocio pueda usar sin pedir ayuda.
-      </p>
-      <p>
-        Me interesan los problemas donde finanzas y datos se cruzan — forecasting de demanda, control de
-        costos, eficiencia operativa. En julio de 2026 completé dos programas de Educación Continua UC en
-        SQL y Python para formalizar la parte técnica.
-      </p>
-
-      <div class="table-scroll">
-        <table class="booktabs">
-          <caption>Tabla 1 — Impacto acumulado en roles recientes.</caption>
-          <thead>
-            <tr><th scope="col">Indicador</th><th scope="col" class="num">Valor</th><th scope="col">Alcance</th></tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">Filas procesadas</th><td class="num mono">3,2 M</td><td>mes corrido</td></tr>
-            <tr><th scope="row">Reducción en tiempo de reporting</th><td class="num mono">40 %</td><td>ciclo semanal</td></tr>
-            <tr><th scope="row">Dashboards en producción</th><td class="num mono">12</td><td>acumulado</td></tr>
-            <tr><th scope="row">Áreas de negocio atendidas</th><td class="num mono">6</td><td>acumulado</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="experiencia">
-      <h2 class="sec-h"><span class="sec-num">02</span> Experiencia</h2>
-
-      <article class="entry">
-        <p class="entry-meta"><span class="mono">2025-09 — 2026-02</span> <span class="op">·</span> Retail</p>
-        <h3 class="entry-title">Analista de planificación y control financiero (reemplazo)</h3>
-        <p class="entry-org">Valle Dorado — distribuidor Mobil Copec</p>
-        <p class="entry-note">Redujo el ciclo de reporting semanal de 6 h a 2 h automatizando la ingesta de datos.</p>
-        <details class="detail">
-          <summary>Responsabilidades</summary>
-          <p>
-            Apoyo en los procesos de planificación financiera, trazabilidad de procesos operacionales,
-            elaboración de forecasting de demanda, monitoreo de KPI e integración y consolidación de
-            información desde múltiples fuentes de datos.
-          </p>
-        </details>
-        <p class="mono taglist">sql · python · power bi</p>
-      </article>
-
-      <article class="entry">
-        <p class="entry-meta"><span class="mono">2023-12 — 2025-05</span> <span class="op">·</span> Tecnologías de la información</p>
-        <h3 class="entry-title">Analista de datos y cofundador</h3>
-        <p class="entry-org">Novokey — plataforma de seguridad vehicular con IoT (B2B y B2C)</p>
-        <p class="entry-note">Diseño de la capa de BI que sostuvo la operación y el control de costos.</p>
-        <details class="detail">
-          <summary>Responsabilidades</summary>
-          <p>
-            Diseño e implementación de soluciones de Business Intelligence mediante procesos ETL,
-            automatización de reportes y análisis de datos operacionales para optimizar la eficiencia de
-            los procesos e identificar oportunidades de control de costos.
-          </p>
-        </details>
-        <p class="mono taglist">sql · python · power bi</p>
-      </article>
-    </section>
-
-    <section id="proyectos">
-      <h2 class="sec-h"><span class="sec-num">03</span> Proyectos</h2>
-
-      <p class="sec-intro">
-        Los tres casos siguientes usan datos sintéticos de demostración; están publicados para mostrar
-        método, no resultados de negocio reales.
-      </p>
-
-      <div class="filterbar" role="group" aria-label="Filtrar proyectos por tecnología">
-        <span class="filter-label mono">filtrar</span>
-        <button class="filter-btn active" type="button" data-filter="todos" aria-pressed="true">todos</button>
-        <button class="filter-btn" type="button" data-filter="python" aria-pressed="false">python</button>
-        <button class="filter-btn" type="button" data-filter="sql" aria-pressed="false">sql</button>
-        <button class="filter-btn" type="button" data-filter="pandas" aria-pressed="false">pandas</button>
-        <button class="filter-btn" type="button" data-filter="streamlit" aria-pressed="false">streamlit</button>
-        <button class="filter-btn" type="button" data-filter="xgboost" aria-pressed="false">xgboost</button>
-        <button class="filter-btn" type="button" data-filter="bigquery" aria-pressed="false">bigquery</button>
+    <div class="split">
+      <div class="prose">
+        <p>
+          Ingeniero Comercial con mención en Finanzas y un Master of Science in Management. Mi experiencia
+          está en control de gestión y planificación financiera: forecasting de demanda, monitoreo de KPI,
+          consolidación de información desde sistemas que no conversan entre sí.
+        </p>
+        <p>
+          Lo que me interesa es la parte donde el reporting deja de ser manual. Automatizar la ingesta,
+          modelar los datos una sola vez, y que el resultado sea algo que un gerente pueda abrir el lunes
+          por la mañana sin llamar a nadie. En julio de 2026 cerré dos programas de Educación Continua UC
+          en SQL y Python para formalizar la parte técnica de eso.
+        </p>
       </div>
 
-      <article class="entry" id="case-churn" data-tags="pandas xgboost sql">
-        <p class="entry-meta"><span class="mono">caso de estudio</span> <span class="op">·</span> <span class="status">validado en holdout</span></p>
-        <h3 class="entry-title">Motor de segmentación y predicción de churn</h3>
-        <p class="entry-note">El 18 % de la base concentra el 74 % de las fugas de ingresos, lo que permite focalizar la campaña preventiva sobre ese grupo.</p>
+      <dl class="factlist">
+        <dt>Disponibilidad</dt><dd>Inmediata</dd>
+        <dt>Buscando</dt><dd>Analista de datos / Control de gestión</dd>
+        <dt>Formación</dt><dd>Ing. Comercial (UNAB) · MSc Management (Kedge)</dd>
+        <dt>Ubicación</dt><dd>Santiago, Chile</dd>
+        <dt>Idiomas</dt><dd>Español (nativo) · Inglés</dd>
+        <dt>Contacto</dt>
+        <dd class="mailrow">
+          <a href="mailto:rbriones.10@gmail.com">rbriones.10@gmail.com</a>
+          <button class="copybtn" type="button" data-copy="rbriones.10@gmail.com" aria-label="Copiar correo">copiar</button>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</section>
 
-        <div class="viewer">
-          <div class="viewer-bar">
-            <span class="mono viewer-title">fig. 1</span>
-            <div class="segmented" role="group" aria-label="Alternar vista">
-              <button class="seg-btn active" type="button" data-view="chart" aria-pressed="true">gráfico</button>
-              <button class="seg-btn" type="button" data-view="code" aria-pressed="false">consulta</button>
-            </div>
-          </div>
+<!-- ══ STACK ══ -->
+<section id="stack" class="section section-alt">
+  <div class="wrap">
+    <p class="eyebrow">// Stack</p>
+    <h2 class="section-h">Herramientas de trabajo</h2>
 
-          <div class="view-chart">
-            <figure class="figure">
-              <svg class="figure-svg" viewBox="0 0 460 190" role="img" aria-label="Barras del score de abandono por cohorte; la cohorte E concentra el mayor riesgo">
-                <rect class="panel" x="38" y="8" width="414" height="140"/>
-                <line class="gridline" x1="38" y1="113" x2="452" y2="113"/>
-                <line class="gridline" x1="38" y1="78" x2="452" y2="78"/>
-                <line class="gridline" x1="38" y1="43" x2="452" y2="43"/>
-                <rect class="bar" x="60" y="92" width="50" height="56"><title>Cohorte A — 0.40</title></rect>
-                <rect class="bar" x="132" y="57" width="50" height="91"><title>Cohorte B — 0.65</title></rect>
-                <rect class="bar" x="204" y="110" width="50" height="38"><title>Cohorte C — 0.27</title></rect>
-                <rect class="bar" x="276" y="36" width="50" height="112"><title>Cohorte D — 0.80</title></rect>
-                <rect class="bar bar-hi" x="348" y="8" width="50" height="140"><title>Cohorte E — 1.00 (máximo riesgo)</title></rect>
-                <text class="tick" x="32" y="151" text-anchor="end">0.00</text>
-                <text class="tick" x="32" y="116" text-anchor="end">0.25</text>
-                <text class="tick" x="32" y="81" text-anchor="end">0.50</text>
-                <text class="tick" x="32" y="46" text-anchor="end">0.75</text>
-                <text class="tick" x="32" y="13" text-anchor="end">1.00</text>
-                <text class="tick" x="85" y="164" text-anchor="middle">A</text>
-                <text class="tick" x="157" y="164" text-anchor="middle">B</text>
-                <text class="tick" x="229" y="164" text-anchor="middle">C</text>
-                <text class="tick" x="301" y="164" text-anchor="middle">D</text>
-                <text class="tick" x="373" y="164" text-anchor="middle">E</text>
-                <text class="axis-title" x="245" y="184" text-anchor="middle">cohorte transaccional</text>
-              </svg>
-              <figcaption>Fig. 1 — Score relativo de probabilidad de abandono por cohorte. Datos sintéticos, n = 5.</figcaption>
-            </figure>
-          </div>
+    <div class="stackgrid">
+      <div class="stackcol">
+        <h3>Análisis &amp; visualización</h3>
+        <p class="chips">pandas · numpy · Power BI · Excel · Streamlit</p>
+      </div>
+      <div class="stackcol">
+        <h3>Lenguajes</h3>
+        <p class="chips">SQL · Python · R</p>
+      </div>
+      <div class="stackcol">
+        <h3>Datos &amp; nube</h3>
+        <p class="chips">BigQuery · GCP · ETL · Git</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-          <div class="view-code" hidden>
-            <div class="chunk">
-              <div class="chunk-bar">
-                <span class="mono">sql</span>
-                <button class="copy-btn copy-code-btn" type="button" data-copy="SELECT
+<!-- ══ TRAYECTORIA ══ -->
+<section id="trayectoria" class="section">
+  <div class="wrap">
+    <p class="eyebrow">// Trayectoria</p>
+    <h2 class="section-h">Experiencia, entrada por entrada</h2>
+
+    <details class="log">
+      <summary>
+        <span class="log-id">EXP · 01</span>
+        <span class="log-title">Analista de planificación y control financiero</span>
+        <span class="log-metric">Reporting 6 h → 2 h</span>
+        <span class="log-plus" aria-hidden="true"></span>
+      </summary>
+      <div class="log-body">
+        <dl class="metadl">
+          <dt>Empresa</dt><dd>Valle Dorado — distribuidor Mobil Copec</dd>
+          <dt>Período</dt><dd class="mono">2025-09 — 2026-02 (reemplazo)</dd>
+          <dt>Stack</dt><dd class="mono">SQL · Python · Power BI · Excel</dd>
+        </dl>
+        <p>
+          Apoyo en planificación financiera, trazabilidad de procesos operacionales, forecasting de
+          demanda y monitoreo de KPI, con integración y consolidación de información desde múltiples
+          fuentes de datos.
+        </p>
+        <div class="practice">
+          <p class="practice-h">En la práctica</p>
+          <p>
+            El ciclo de reporting semanal pasó de seis horas a dos automatizando la ingesta. Las cuatro
+            horas recuperadas se fueron a analizar los números en vez de armarlos.
+          </p>
+        </div>
+      </div>
+    </details>
+
+    <details class="log">
+      <summary>
+        <span class="log-id">EXP · 02</span>
+        <span class="log-title">Analista de datos y cofundador</span>
+        <span class="log-metric">IoT · B2B y B2C</span>
+        <span class="log-plus" aria-hidden="true"></span>
+      </summary>
+      <div class="log-body">
+        <dl class="metadl">
+          <dt>Empresa</dt><dd>Novokey — seguridad vehicular con IoT</dd>
+          <dt>Período</dt><dd class="mono">2023-12 — 2025-05</dd>
+          <dt>Stack</dt><dd class="mono">SQL · Python · Power BI · ETL</dd>
+        </dl>
+        <p>
+          Diseño e implementación de soluciones de Business Intelligence mediante procesos ETL,
+          automatización de reportes y análisis de datos operacionales, para optimizar la eficiencia de
+          los procesos e identificar oportunidades de control de costos.
+        </p>
+        <div class="practice">
+          <p class="practice-h">En la práctica</p>
+          <p>
+            Cofundar significó construir la capa de datos desde cero y decidir qué medir antes de que
+            existiera el dato. Esa restricción enseña más sobre modelado que cualquier dataset limpio.
+          </p>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ══ REGISTRO / PROYECTOS ══ -->
+<section id="registro" class="section section-alt">
+  <div class="wrap">
+    <p class="eyebrow">// Registro</p>
+    <h2 class="section-h">Proyectos, entrada por entrada</h2>
+    <p class="section-note">
+      Los tres casos usan datos sintéticos de demostración. Están publicados para mostrar método, no
+      resultados de negocio reales.
+    </p>
+
+    <details class="log" open>
+      <summary>
+        <span class="log-id">LOG · 01</span>
+        <span class="log-title">Segmentación y predicción de churn</span>
+        <span class="log-metric">18 % de la base = 74 % de la fuga</span>
+        <span class="log-plus" aria-hidden="true"></span>
+      </summary>
+      <div class="log-body">
+        <dl class="metadl">
+          <dt>Tipo</dt><dd>Clasificación · scoring de riesgo</dd>
+          <dt>Stack</dt><dd class="mono">Python · pandas · XGBoost · SQL</dd>
+          <dt>Datos</dt><dd>Dataset sintético de demostración</dd>
+        </dl>
+        <p>
+          Preparación de features transaccionales y de comportamiento, entrenamiento de XGBoost y
+          validación contra un período holdout de tres meses. El resultado se expone como un score por
+          cliente que alimenta la campaña de retención.
+        </p>
+
+        <figure class="fig">
+          <svg viewBox="0 0 460 190" role="img" aria-label="Score de abandono por cohorte; la cohorte E concentra el mayor riesgo">
+            <rect class="panel" x="38" y="8" width="414" height="140"/>
+            <line class="grid" x1="38" y1="113" x2="452" y2="113"/>
+            <line class="grid" x1="38" y1="78" x2="452" y2="78"/>
+            <line class="grid" x1="38" y1="43" x2="452" y2="43"/>
+            <rect class="bar" x="60" y="92" width="50" height="56"><title>Cohorte A — 0.40</title></rect>
+            <rect class="bar" x="132" y="57" width="50" height="91"><title>Cohorte B — 0.65</title></rect>
+            <rect class="bar" x="204" y="110" width="50" height="38"><title>Cohorte C — 0.27</title></rect>
+            <rect class="bar" x="276" y="36" width="50" height="112"><title>Cohorte D — 0.80</title></rect>
+            <rect class="bar barhi" x="348" y="8" width="50" height="140"><title>Cohorte E — 1.00 (máximo riesgo)</title></rect>
+            <text class="tick" x="32" y="151" text-anchor="end">0.00</text>
+            <text class="tick" x="32" y="81" text-anchor="end">0.50</text>
+            <text class="tick" x="32" y="13" text-anchor="end">1.00</text>
+            <text class="tick" x="85" y="164" text-anchor="middle">A</text>
+            <text class="tick" x="157" y="164" text-anchor="middle">B</text>
+            <text class="tick" x="229" y="164" text-anchor="middle">C</text>
+            <text class="tick" x="301" y="164" text-anchor="middle">D</text>
+            <text class="tick" x="373" y="164" text-anchor="middle">E</text>
+            <text class="axt" x="245" y="184" text-anchor="middle">cohorte transaccional</text>
+          </svg>
+          <figcaption>Fig. 1 — Score relativo de probabilidad de abandono por cohorte. n = 5.</figcaption>
+        </figure>
+
+        <p class="results"><strong>Consulta de producción:</strong></p>
+        <div class="chunk">
+          <div class="chunk-bar">
+            <span>sql</span>
+            <button class="copybtn" type="button" data-copy="SELECT
   customer_id,
   datediff(current_date, last_active_at) AS days_inactive,
   round(churn_score, 3) AS churn_score
 FROM analytics.customer_features
 WHERE churn_score > 0.72
-ORDER BY churn_score DESC;">
-                  <svg class="icon copy-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
-                  <svg class="icon check-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M20 6L9 17l-5-5"/></svg>
-                  <span class="copy-label">copiar</span>
-                </button>
-              </div>
+ORDER BY churn_score DESC;">copiar</button>
+          </div>
 <pre class="chunk-in"><code><span class="kw">SELECT</span>
   customer_id,
   <span class="fn">datediff</span>(<span class="kw">current_date</span>, last_active_at) <span class="kw">AS</span> days_inactive,
-  <span class="fn">round</span>(churn_score, <span class="num">3</span>) <span class="kw">AS</span> churn_score
+  <span class="fn">round</span>(churn_score, <span class="nm">3</span>) <span class="kw">AS</span> churn_score
 <span class="kw">FROM</span> analytics.customer_features
-<span class="kw">WHERE</span> churn_score <span class="kw">&gt;</span> <span class="num">0.72</span>
+<span class="kw">WHERE</span> churn_score <span class="kw">&gt;</span> <span class="nm">0.72</span>
 <span class="kw">ORDER BY</span> churn_score <span class="kw">DESC</span>;</code></pre>
 <pre class="chunk-out"><code>## customer_id  days_inactive  churn_score
 ##      104882             91        0.968
 ##      117340             74        0.941
 ##      109273             68        0.903
 ## … 1.281 filas más</code></pre>
-            </div>
-          </div>
         </div>
 
-        <details class="detail">
-          <summary>Metodología</summary>
+        <div class="practice">
+          <p class="practice-h">En la práctica</p>
           <p>
-            Preparación de features transaccionales y de comportamiento. Entrenamiento y validación de
-            XGBoost con período holdout de tres meses.
+            El 18 % de la base concentra el 74 % de la fuga de ingresos. En vez de una campaña de
+            retención sobre toda la cartera, el equipo comercial ataca un grupo acotado — mismo
+            presupuesto, mucho mejor retorno.
           </p>
-        </details>
-        <p class="mono taglist">pandas · xgboost · sql <span class="op">·</span> <a href="#">notebook</a> <span class="op">·</span> <a href="#">reporte</a></p>
-      </article>
+        </div>
 
-      <article class="entry" data-tags="python sql bigquery">
-        <p class="entry-meta"><span class="mono">dashboard</span> <span class="op">·</span> <span class="status">actualizado a diario</span></p>
-        <h3 class="entry-title">Dashboard de ventas e ingresos</h3>
-        <p class="entry-note">Automatiza la ingesta desde cuatro sistemas distribuidos y elimina cuatro horas semanales de consolidación manual en Excel.</p>
+        <p class="log-links"><a href="#">Ver notebook ↗</a> <a href="#">Ver reporte ↗</a></p>
+      </div>
+    </details>
 
-        <figure class="figure figure-boxed">
-          <svg class="figure-svg" viewBox="0 0 460 185" role="img" aria-label="Serie semanal de ventas consolidadas, con máximo en la semana 6">
+    <details class="log">
+      <summary>
+        <span class="log-id">LOG · 02</span>
+        <span class="log-title">Dashboard de ventas e ingresos</span>
+        <span class="log-metric">4 sistemas · 4 h/semana ahorradas</span>
+        <span class="log-plus" aria-hidden="true"></span>
+      </summary>
+      <div class="log-body">
+        <dl class="metadl">
+          <dt>Tipo</dt><dd>Pipeline ETL · Business Intelligence</dd>
+          <dt>Stack</dt><dd class="mono">Python · SQL · BigQuery · GCP · Streamlit</dd>
+          <dt>Datos</dt><dd>Dataset sintético de demostración</dd>
+        </dl>
+        <p>
+          ETL desplegado en GCP/BigQuery que consolida registros transaccionales desde cuatro sistemas y
+          los conecta con un tablero interactivo. La actualización es diaria y no requiere intervención.
+        </p>
+
+        <figure class="fig">
+          <svg viewBox="0 0 460 185" role="img" aria-label="Serie semanal de ventas consolidadas, con máximo en la semana 6">
             <rect class="panel" x="46" y="8" width="406" height="132"/>
-            <line class="gridline" x1="46" y1="107" x2="452" y2="107"/>
-            <line class="gridline" x1="46" y1="74" x2="452" y2="74"/>
-            <line class="gridline" x1="46" y1="41" x2="452" y2="41"/>
+            <line class="grid" x1="46" y1="107" x2="452" y2="107"/>
+            <line class="grid" x1="46" y1="74" x2="452" y2="74"/>
+            <line class="grid" x1="46" y1="41" x2="452" y2="41"/>
             <polygon class="area" points="66,110 130,92 194,103 258,55 322,66 386,25 442,40 442,140 66,140"/>
             <polyline class="line" points="66,110 130,92 194,103 258,55 322,66 386,25 442,40"/>
             <circle class="pt" cx="66" cy="110" r="3.5"><title>Semana 1 — 42 k</title></circle>
@@ -283,47 +310,61 @@ ORDER BY churn_score DESC;">
             <circle class="pt" cx="258" cy="55" r="3.5"><title>Semana 4 — 76 k</title></circle>
             <circle class="pt" cx="322" cy="66" r="3.5"><title>Semana 5 — 69 k</title></circle>
             <circle class="pt" cx="386" cy="25" r="3.5"><title>Semana 6 — 93 k</title></circle>
-            <circle class="pt pt-hi" cx="442" cy="40" r="4"><title>Semana 7 — 85 k (última lectura)</title></circle>
+            <circle class="pt pthi" cx="442" cy="40" r="4"><title>Semana 7 — 85 k</title></circle>
             <text class="tick" x="40" y="143" text-anchor="end">40 k</text>
-            <text class="tick" x="40" y="110" text-anchor="end">60 k</text>
             <text class="tick" x="40" y="77" text-anchor="end">80 k</text>
             <text class="tick" x="40" y="44" text-anchor="end">100 k</text>
             <text class="tick" x="66" y="157" text-anchor="middle">1</text>
             <text class="tick" x="194" y="157" text-anchor="middle">3</text>
             <text class="tick" x="322" y="157" text-anchor="middle">5</text>
             <text class="tick" x="442" y="157" text-anchor="middle">7</text>
-            <text class="axis-title" x="249" y="177" text-anchor="middle">semana</text>
+            <text class="axt" x="249" y="177" text-anchor="middle">semana</text>
           </svg>
-          <figcaption>Fig. 2 — Ventas semanales consolidadas en BigQuery. Datos sintéticos, 7 puntos.</figcaption>
+          <figcaption>Fig. 2 — Ventas semanales consolidadas en BigQuery. 7 puntos.</figcaption>
         </figure>
 
-        <details class="detail">
-          <summary>Pipeline</summary>
+        <div class="practice">
+          <p class="practice-h">En la práctica</p>
           <p>
-            ETL desplegado en GCP/BigQuery que conecta los registros transaccionales con un tablero
-            interactivo en Streamlit.
+            Antes, alguien copiaba y pegaba cuatro exportes a Excel cada lunes. Ese trabajo desapareció, y
+            con él la clase de error que nadie detecta hasta el cierre de mes.
           </p>
-        </details>
-        <p class="mono taglist">python · sql · bigquery <span class="op">·</span> <a href="#">demo</a> <span class="op">·</span> <a href="#">github</a></p>
-      </article>
+        </div>
 
-      <article class="entry" data-tags="streamlit pandas">
-        <p class="entry-meta"><span class="mono">data app</span> <span class="op">·</span> alojada en la nube</p>
-        <h3 class="entry-title">Explorador de cohortes y retención</h3>
-        <p class="entry-note">Producto y Growth pueden evaluar la retención acumulada a 30, 60 y 90 días sin escribir SQL.</p>
+        <p class="log-links"><a href="#">Ver demo ↗</a> <a href="#">Ver repositorio ↗</a></p>
+      </div>
+    </details>
 
-        <figure class="figure figure-boxed">
-          <svg class="figure-svg" viewBox="0 0 460 160" role="img" aria-label="Mapa de calor de retención por cohorte mensual de adquisición">
+    <details class="log">
+      <summary>
+        <span class="log-id">LOG · 03</span>
+        <span class="log-title">Explorador de cohortes y retención</span>
+        <span class="log-metric">Retención D30/D60/D90 sin SQL</span>
+        <span class="log-plus" aria-hidden="true"></span>
+      </summary>
+      <div class="log-body">
+        <dl class="metadl">
+          <dt>Tipo</dt><dd>Data app · análisis de cohortes</dd>
+          <dt>Stack</dt><dd class="mono">Python · pandas · Streamlit</dd>
+          <dt>Datos</dt><dd>Dataset sintético de demostración</dd>
+        </dl>
+        <p>
+          Calcula matrices de cohortes y curvas de supervivencia sobre la base de usuarios, servidas desde
+          una app que cualquiera del equipo puede abrir y filtrar.
+        </p>
+
+        <figure class="fig">
+          <svg viewBox="0 0 460 160" role="img" aria-label="Mapa de calor de retención por cohorte mensual de adquisición">
             <rect class="panel" x="70" y="8" width="382" height="106"/>
-            <rect class="cell c100" x="80" y="18" width="88" height="26"><title>Cohorte jun · D0 — 100 %</title></rect>
-            <rect class="cell c75" x="176" y="18" width="88" height="26"><title>Cohorte jun · D30 — 74 %</title></rect>
-            <rect class="cell c50" x="272" y="18" width="88" height="26"><title>Cohorte jun · D60 — 51 %</title></rect>
-            <rect class="cell c25" x="368" y="18" width="76" height="26"><title>Cohorte jun · D90 — 23 %</title></rect>
-            <rect class="cell c100" x="80" y="50" width="88" height="26"><title>Cohorte jul · D0 — 100 %</title></rect>
-            <rect class="cell c75" x="176" y="50" width="88" height="26"><title>Cohorte jul · D30 — 78 %</title></rect>
-            <rect class="cell c50" x="272" y="50" width="88" height="26"><title>Cohorte jul · D60 — 49 %</title></rect>
-            <rect class="cell c100" x="80" y="82" width="88" height="26"><title>Cohorte ago · D0 — 100 %</title></rect>
-            <rect class="cell c75" x="176" y="82" width="88" height="26"><title>Cohorte ago · D30 — 81 %</title></rect>
+            <rect class="cell c100" x="80" y="18" width="88" height="26"><title>jun · D0 — 100 %</title></rect>
+            <rect class="cell c75" x="176" y="18" width="88" height="26"><title>jun · D30 — 74 %</title></rect>
+            <rect class="cell c50" x="272" y="18" width="88" height="26"><title>jun · D60 — 51 %</title></rect>
+            <rect class="cell c25" x="368" y="18" width="76" height="26"><title>jun · D90 — 23 %</title></rect>
+            <rect class="cell c100" x="80" y="50" width="88" height="26"><title>jul · D0 — 100 %</title></rect>
+            <rect class="cell c75" x="176" y="50" width="88" height="26"><title>jul · D30 — 78 %</title></rect>
+            <rect class="cell c50" x="272" y="50" width="88" height="26"><title>jul · D60 — 49 %</title></rect>
+            <rect class="cell c100" x="80" y="82" width="88" height="26"><title>ago · D0 — 100 %</title></rect>
+            <rect class="cell c75" x="176" y="82" width="88" height="26"><title>ago · D30 — 81 %</title></rect>
             <text class="tick" x="64" y="36" text-anchor="end">jun</text>
             <text class="tick" x="64" y="68" text-anchor="end">jul</text>
             <text class="tick" x="64" y="100" text-anchor="end">ago</text>
@@ -331,185 +372,170 @@ ORDER BY churn_score DESC;">
             <text class="tick" x="220" y="130" text-anchor="middle">D30</text>
             <text class="tick" x="316" y="130" text-anchor="middle">D60</text>
             <text class="tick" x="406" y="130" text-anchor="middle">D90</text>
-            <text class="axis-title" x="261" y="150" text-anchor="middle">días desde la adquisición</text>
+            <text class="axt" x="261" y="150" text-anchor="middle">días desde la adquisición</text>
           </svg>
-          <figcaption>Fig. 3 — Matriz de retención por cohorte mensual. Datos sintéticos, 3 × 4.</figcaption>
+          <figcaption>Fig. 3 — Matriz de retención por cohorte mensual. 3 × 4.</figcaption>
         </figure>
 
-        <details class="detail">
-          <summary>Arquitectura</summary>
-          <p>Calcula matrices de cohortes y curvas de supervivencia con pandas, servidas desde Streamlit.</p>
-        </details>
-        <p class="mono taglist">streamlit · pandas <span class="op">·</span> <a href="https://tuapp.streamlit.app" target="_blank" rel="noopener">abrir app</a></p>
-      </article>
+        <div class="practice">
+          <p class="practice-h">En la práctica</p>
+          <p>
+            Producto y Growth dejan de pedirle consultas al equipo de datos para preguntas que se repiten
+            cada mes. La cola de tickets baja y las respuestas llegan el mismo día.
+          </p>
+        </div>
 
-      <p class="filter-empty" hidden>No hay proyectos con esa tecnología todavía.</p>
-    </section>
-
-    <section id="educacion">
-      <h2 class="sec-h"><span class="sec-num">04</span> Educación</h2>
-
-      <div class="table-scroll">
-        <table class="booktabs">
-          <caption>Tabla 2 — Formación académica.</caption>
-          <thead>
-            <tr><th scope="col">Programa</th><th scope="col">Institución</th><th scope="col" class="num">Años</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Master of Science in Management</th>
-              <td>Kedge Business School, Bordeaux</td>
-              <td class="num mono">2018–2019</td>
-            </tr>
-            <tr>
-              <th scope="row">Ingeniería Comercial, mención Finanzas</th>
-              <td>Universidad Andrés Bello, Viña del Mar</td>
-              <td class="num mono">2014–2017</td>
-            </tr>
-            <tr>
-              <th scope="row">Educación básica y media</th>
-              <td>The Mackay School, Viña del Mar</td>
-              <td class="num mono">1998–2011</td>
-            </tr>
-          </tbody>
-        </table>
+        <p class="log-links"><a href="https://tuapp.streamlit.app" target="_blank" rel="noopener">Abrir app ↗</a></p>
       </div>
-    </section>
+    </details>
+  </div>
+</section>
 
-    <section id="certificaciones">
-      <h2 class="sec-h"><span class="sec-num">05</span> Certificaciones</h2>
-
-      <p class="sec-intro">
-        Cada entrada abre el certificado original en PDF. Los códigos permiten comprobar autenticidad en
-        el validador de la institución emisora.
-      </p>
-
-      <article class="entry entry-cert">
-        <p class="entry-meta"><span class="mono">2026-07</span> <span class="op">·</span> 30 h <span class="op">·</span> nota 7,0 / 7,0</p>
-        <h3 class="entry-title">Python para el manejo de datos: nivel intermedio</h3>
-        <p class="entry-org">Pontificia Universidad Católica de Chile — Educación Continua (TELEDUC)</p>
-        <p class="mono taglist">
-          <a href="./Certificado_Python_Intermedio.pdf" target="_blank" rel="noopener">ver certificado (PDF)</a>
-          <span class="op">·</span>
-          <a href="https://www.uc.cl/ECvalidacertificado" target="_blank" rel="noopener">validar</a>
-          <span class="op">·</span>
-          <span class="muted">código A233BA0B7C</span>
-        </p>
-      </article>
-
-      <article class="entry entry-cert">
-        <p class="entry-meta"><span class="mono">2026-07</span> <span class="op">·</span> 30 h <span class="op">·</span> nota 7,0 / 7,0</p>
-        <h3 class="entry-title">Herramientas para la automatización de procesos de bases de datos relacionales con SQL</h3>
-        <p class="entry-org">Pontificia Universidad Católica de Chile — Educación Continua (TELEDUC)</p>
-        <p class="mono taglist">
-          <a href="./Certificado_SQL_Intermedio.pdf" target="_blank" rel="noopener">ver certificado (PDF)</a>
-          <span class="op">·</span>
-          <a href="https://www.uc.cl/ECvalidacertificado" target="_blank" rel="noopener">validar</a>
-          <span class="op">·</span>
-          <span class="muted">código A233BA0B7B</span>
-        </p>
-      </article>
-    </section>
-
-  </main>
-</div>
-
-<footer class="footer">
+<!-- ══ CREDENCIALES ══ -->
+<section id="credenciales" class="section">
   <div class="wrap">
-    <p class="mono">Richard Briones Matus <span class="op">·</span> Santiago, Chile <span class="op">·</span> <span id="year"></span> <span class="op">·</span> última actualización sep 2026</p>
+    <p class="eyebrow">// Credenciales</p>
+    <h2 class="section-h">Formación y certificaciones</h2>
+
+    <h3 class="sub-h">Certificaciones</h3>
+
+    <article class="cert">
+      <div class="cert-main">
+        <p class="cert-meta"><span class="mono">CERT · 01</span> · 2026-07 · 30 h · nota 7,0 / 7,0</p>
+        <h4 class="cert-title">Python para el manejo de datos: nivel intermedio</h4>
+        <p class="cert-org">Pontificia Universidad Católica de Chile — Educación Continua (TELEDUC)</p>
+        <p class="cert-links">
+          <a href="./certificados/certificado-python-uc.jpg" target="_blank" rel="noopener">Ver certificado ↗</a>
+          <a href="./Certificado_Python_Intermedio.pdf" target="_blank" rel="noopener">PDF</a>
+          <a href="https://www.uc.cl/ECvalidacertificado" target="_blank" rel="noopener">Validar ↗</a>
+          <span class="muted mono">A233BA0B7C</span>
+        </p>
+      </div>
+      <a class="cert-thumb" href="./certificados/certificado-python-uc.jpg" target="_blank" rel="noopener" aria-label="Ver certificado de Python en tamaño completo">
+        <img src="./certificados/certificado-python-uc.jpg" alt="Certificado de aprobación del curso de Python, Pontificia Universidad Católica de Chile" loading="lazy" width="1275" height="1650" />
+      </a>
+    </article>
+
+    <article class="cert">
+      <div class="cert-main">
+        <p class="cert-meta"><span class="mono">CERT · 02</span> · 2026-07 · 30 h · nota 7,0 / 7,0</p>
+        <h4 class="cert-title">Herramientas para la automatización de procesos de bases de datos relacionales con SQL</h4>
+        <p class="cert-org">Pontificia Universidad Católica de Chile — Educación Continua (TELEDUC)</p>
+        <p class="cert-links">
+          <a href="./certificados/certificado-sql-uc.jpg" target="_blank" rel="noopener">Ver certificado ↗</a>
+          <a href="./Certificado_SQL_Intermedio.pdf" target="_blank" rel="noopener">PDF</a>
+          <a href="https://www.uc.cl/ECvalidacertificado" target="_blank" rel="noopener">Validar ↗</a>
+          <span class="muted mono">A233BA0B7B</span>
+        </p>
+      </div>
+      <a class="cert-thumb" href="./certificados/certificado-sql-uc.jpg" target="_blank" rel="noopener" aria-label="Ver certificado de SQL en tamaño completo">
+        <img src="./certificados/certificado-sql-uc.jpg" alt="Certificado de aprobación del curso de SQL, Pontificia Universidad Católica de Chile" loading="lazy" width="1275" height="1650" />
+      </a>
+    </article>
+
+    <h3 class="sub-h">Formación académica</h3>
+
+    <div class="tablescroll">
+      <table class="rules">
+        <thead>
+          <tr><th scope="col">Programa</th><th scope="col">Institución</th><th scope="col" class="right">Años</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Master of Science in Management</th>
+            <td>Kedge Business School, Bordeaux</td>
+            <td class="right mono">2018–2019</td>
+          </tr>
+          <tr>
+            <th scope="row">Ingeniería Comercial, mención Finanzas</th>
+            <td>Universidad Andrés Bello, Viña del Mar</td>
+            <td class="right mono">2014–2017</td>
+          </tr>
+          <tr>
+            <th scope="row">Educación básica y media</th>
+            <td>The Mackay School, Viña del Mar</td>
+            <td class="right mono">1998–2011</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACTO ══ -->
+<section id="contacto" class="section section-alt">
+  <div class="wrap">
+    <p class="eyebrow">// Contacto</p>
+    <h2 class="section-h">Conversemos</h2>
+    <p class="contact-links">
+      <a href="mailto:rbriones.10@gmail.com">rbriones.10@gmail.com</a>
+      <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/rbmatus" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="./CV_Richard_Briones.pdf" target="_blank" rel="noopener">CV (PDF) ↗</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="mono">© <span id="year"></span> Richard Briones Matus · Santiago, Chile · Hecho con HTML y CSS, sin frameworks.</p>
   </div>
 </footer>
 
 <script>
 (function () {
   var root = document.documentElement;
-  var stored = localStorage.getItem('theme');
-  if (stored === 'light' || stored === 'dark') root.setAttribute('data-theme', stored);
-  var t = document.getElementById('theme-toggle');
-  if (t) t.addEventListener('click', function () {
-    var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    var cur = root.getAttribute('data-theme') || (dark ? 'dark' : 'light');
+  var s = localStorage.getItem('theme');
+  if (s === 'light' || s === 'dark') root.setAttribute('data-theme', s);
+  var b = document.getElementById('theme-toggle');
+  if (b) b.addEventListener('click', function () {
+    var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var cur = root.getAttribute('data-theme') || (d ? 'dark' : 'light');
     var next = cur === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
   });
 })();
 
-document.querySelectorAll('.copy-btn').forEach(function (btn) {
+document.querySelectorAll('.copybtn').forEach(function (btn) {
+  var original = btn.textContent;
   btn.addEventListener('click', async function () {
-    var text = btn.dataset.copy;
     try {
-      await navigator.clipboard.writeText(text);
+      await navigator.clipboard.writeText(btn.dataset.copy);
     } catch (e) {
       var ta = document.createElement('textarea');
-      ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
-      document.body.appendChild(ta); ta.select();
-      document.execCommand('copy'); document.body.removeChild(ta);
+      ta.value = btn.dataset.copy;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
     }
-    var c = btn.querySelector('.copy-icon'), k = btn.querySelector('.check-icon'), l = btn.querySelector('.copy-label');
-    btn.classList.add('is-copied');
-    if (c) c.hidden = true;
-    if (k) k.hidden = false;
-    if (l) l.textContent = 'copiado';
+    btn.textContent = 'copiado';
+    btn.classList.add('done');
     setTimeout(function () {
-      btn.classList.remove('is-copied');
-      if (c) c.hidden = false;
-      if (k) k.hidden = true;
-      if (l) l.textContent = 'copiar';
+      btn.textContent = original;
+      btn.classList.remove('done');
     }, 1500);
   });
 });
 
-document.querySelectorAll('.viewer').forEach(function (frame) {
-  var btns = frame.querySelectorAll('.seg-btn');
-  var chart = frame.querySelector('.view-chart');
-  var code = frame.querySelector('.view-code');
-  btns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      btns.forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
-      btn.classList.add('active');
-      btn.setAttribute('aria-pressed', 'true');
-      var showChart = btn.dataset.view === 'chart';
-      chart.hidden = !showChart;
-      code.hidden = showChart;
-    });
-  });
-});
-
 (function () {
-  var buttons = [].slice.call(document.querySelectorAll('.filter-btn'));
-  var cards = [].slice.call(document.querySelectorAll('#proyectos .entry'));
-  var empty = document.querySelector('.filter-empty');
-  buttons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      buttons.forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
-      btn.classList.add('active');
-      btn.setAttribute('aria-pressed', 'true');
-      var f = btn.dataset.filter, n = 0;
-      cards.forEach(function (c) {
-        var tags = (c.dataset.tags || '').split(' ');
-        var show = f === 'todos' || tags.indexOf(f) !== -1;
-        c.hidden = !show;
-        if (show) n++;
-      });
-      if (empty) empty.hidden = n > 0;
-    });
-  });
-})();
-
-(function () {
-  var links = [].slice.call(document.querySelectorAll('.navlist a'));
-  var sections = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  var links = [].slice.call(document.querySelectorAll('.topnav a[href^="#"]'));
+  var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
   if (!('IntersectionObserver' in window)) return;
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
       if (!e.isIntersecting) return;
-      var i = sections.indexOf(e.target);
-      links.forEach(function (l) { l.classList.remove('current'); });
-      if (i > -1) links[i].classList.add('current');
+      var i = secs.indexOf(e.target);
+      links.forEach(function (l) { l.classList.remove('on'); });
+      if (i > -1) links[i].classList.add('on');
     });
-  }, { rootMargin: '-96px 0px -65% 0px' });
-  sections.forEach(function (s) { if (s) io.observe(s); });
+  }, { rootMargin: '-80px 0px -70% 0px' });
+  secs.forEach(function (s) { if (s) io.observe(s); });
 })();
 
 document.getElementById('year').textContent = new Date().getFullYear();
